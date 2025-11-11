@@ -3,8 +3,6 @@ title: TD 5 – Dômes célestes
 draft: false
 ---
 
-# 🌌 TD5 : Dômes célestes dans Unity
-
 ## Objectif
 Ce TD vise à intégrer un **SkyDome** dans une scène Unity pour simuler un ciel réaliste avec cycle jour/nuit et nuages animés.
 
@@ -35,15 +33,6 @@ Ce TD vise à intégrer un **SkyDome** dans une scène Unity pour simuler un cie
 👉 **FIG 1** : Composant SkyDome Script et définition de l’attribut Player.
 
 - SkyDome génère son propre soleil, pas besoin de lumière directionnelle manuelle.
-- Pour s’assurer que le soleil est directionnel, modifiez le script **SkyDomeScript.cs** comme suit :
-
-```csharp
-void Start ()
-{
-    sunLight = new GameObject("Sun");
-    sunLight.AddComponent<Light>();
-    sunLight.GetComponent<Light>().type = LightType.Directional;
-}
 
 
 ## Skydome

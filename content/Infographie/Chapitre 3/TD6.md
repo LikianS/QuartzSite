@@ -3,6 +3,84 @@ title: TD 6 – Nuages volumétriques
 draft: false
 ---
 
+##  Objectif
+Ce TD a pour but d’ajouter des **nuages volumétriques dynamiques** dans une scène Unity à l’aide du package **CloudsToy Manager**.  
+L’objectif est de comprendre comment configurer et ajuster les paramètres de ce système pour obtenir un rendu réaliste et immersif.
+
+---
+
+##  Étapes principales
+
+### **1. Importation du package**
+- Importez le **CloudsToy Manager** depuis l’Asset Store Unity (ou depuis le dossier partagé).
+- Localisez le **préfabriqué CloudsToy Mngr** dans le projet (section *Nuages volumétriques*).
+
+---
+
+### **2. Mise en place de la scène**
+- Glissez-déposez le **préfabriqué CloudsToy Mngr** dans la scène.  
+   Vous ne verrez encore rien, car il nécessite un terrain pour s’aligner.
+- Ajoutez un **Terrain** à la scène.
+- Sculptez ou importez une **carte de hauteur** selon vos besoins, puis appliquez les textures souhaitées.
+- Ajoutez une **lumière directionnelle**.
+
+---
+
+### **3. Visualisation des nuages**
+- Sélectionnez **CloudsToy Mngr** dans la hiérarchie.
+- Appuyez sur **Play** : vous verrez apparaître le **volume de nuages au-dessus du terrain**, comme illustré dans la **Figure 1**.  
+  Le CloudsToy Mngr s’adapte automatiquement pour couvrir toute la surface du terrain.
+
+👉 **FIG 1.** CloudsToy générant des nuages volumétriques au-dessus du terrain.
+
+---
+
+### **4. Ajout du joueur**
+- Ajoutez un **First Person Controller (FPC)** à la scène.
+- Supprimez la **caméra principale** d’origine (le FPC en possède déjà une).
+- Testez la scène pour vérifier que le joueur peut se déplacer et observer les nuages.
+
+---
+
+### **5. Ajustements selon le relief**
+- Si votre terrain est montagneux, **abaissez légèrement** l’objet **CloudsToy Mngr**.
+- Cela permet aux montagnes de **traverser la couche de nuages**, créant un effet immersif où le joueur peut marcher **dans** les nuages.
+
+---
+
+##  Paramètres du CloudsToy Mngr
+
+En sélectionnant **CloudsToy Mngr** dans la hiérarchie, vous pouvez modifier de nombreux paramètres depuis l’inspecteur :
+
+### ** Presets de nuages**
+- Choisissez parmi plusieurs styles : **orageux**, **lever de soleil**, **fantaisie**, etc.
+- Ces préréglages permettent de tester rapidement différents types d’ambiances.
+
+
+---
+
+### **🌫️ Paramètres principaux**
+| Paramètre | Description |
+|------------|-------------|
+| **Cloud Creation Size** | Définit la taille de la boîte bleue dans la scène – zone de création des nuages |
+| **Disappear Multiplier** | Définit la taille de la boîte jaune – zone où les nuages commencent à s’estomper |
+| **Cloud Colors** | Permet de définir les couleurs des nuages |
+| **Cloud Size** | Ajuste la taille globale des nuages |
+| **Cloud Velocity** | Contrôle la vitesse de déplacement des nuages |
+
+---
+
+### ** Intégration dans d’autres projets**
+Le **CloudsToy Mngr** peut être intégré dans n’importe quel projet Unity en important simplement le fichier  
+**CloudsToy.unitypackage** disponible dans le dossier du projet.
+
+---
+
+## Conclusion
+Le **CloudsToy Manager** permet de créer des **nuages volumétriques réalistes et dynamiques** en quelques étapes.  
+Grâce à ses paramètres flexibles (taille, couleur, vitesse, densité), il est possible d’obtenir des **ambiances atmosphériques variées** : du ciel orageux dramatique à une brume douce au lever du soleil.
+
+
 ## Principes de base des nuages volumétriques
 
 ### Théorique :

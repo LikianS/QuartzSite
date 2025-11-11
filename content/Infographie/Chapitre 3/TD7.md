@@ -3,6 +3,92 @@ title: TD 7 – Hisser le drapeau
 draft: false
 ---
 
+##  Objectif
+L’objectif de ce TD est d’apprendre à **simuler un drapeau flottant au vent** à l’aide du **système de physique de tissu (Cloth Physics)** d’Unity.  
+L’exercice permet de comprendre comment appliquer la gravité, les contraintes de mouvement et les forces de vent sur un maillage flexible.
+
+---
+
+##  Étapes principales
+
+### **1. Création de la base du drapeau**
+- Créez un **nouveau projet Unity**.
+- Ajoutez un **Cube** dans la scène, puis redimensionnez-le pour qu’il ait la forme d’un **mât de drapeau**.
+- Ajoutez un **Plan** et positionnez-le **au sommet du mât** : ce sera le drapeau.
+- Supprimez sur ce plan :
+  - Le **Mesh Renderer**
+  - Le **Mesh Collider**  
+   Le drapeau devient invisible temporairement.
+
+📸 **FIG 1.** Configuration initiale d’un drapeau avec un mât (cube) et un plan.
+
+---
+
+### **2. Ajout du composant Cloth**
+- Sélectionnez le plan (le drapeau).
+- Dans l’inspecteur, cliquez sur **Ajouter un composant → Physics → Cloth**.
+- Le plan devient alors un **tissu simulé dynamiquement**, soumis à la gravité et au vent.
+
+---
+
+### **3. Création du matériau du drapeau**
+- Créez un **nouveau matériau** dans le projet.
+- Assignez-lui une **texture de drapeau** (par exemple un drapeau national).
+- Ajoutez ce matériau au **Skinned Mesh Renderer** du drapeau.
+- Dans ce composant, définissez la propriété **Mesh** sur celle du **plan** afin que la texture s’applique correctement.
+
+---
+
+### **4. Définition des contraintes du tissu**
+- Cliquez sur le bouton **Modifier les contraintes du tissu** dans le composant Cloth.
+- Tous les **sommets du drapeau** apparaissent en **noir**.
+- Avec l’outil **Paint Tool**, sélectionnez les sommets **près du mât** :
+  - Ils deviendront **verts**, indiquant qu’ils sont **fixés** et ne bougeront pas.  
+   Cela simule les points d’attache du drapeau au mât.
+
+---
+
+### **5. Test de la simulation physique**
+- Lancez la scène en **Play Mode**.
+- Le drapeau :
+  - Tombe naturellement sous l’effet de la **gravité** ;
+  - Reste accroché au mât grâce aux sommets fixés.  
+   Vous pouvez ajuster la rigidité du tissu dans les paramètres du composant Cloth pour modifier sa souplesse.
+
+---
+
+### **6. Ajout du vent**
+- Sélectionnez le plan avec le composant Cloth.
+- Localisez les champs suivants :
+  - **External Acceleration**
+  - **Random Acceleration**
+
+ **Définissez les valeurs suivantes :**
+External Acceleration = (80, 5, 0)
+Random Acceleration = (100, 5, 20)
+Ces paramètres appliquent une **force constante dans la direction X** (le vent principal) tout en ajoutant des **variations aléatoires**.
+
+---
+
+##  Explications physiques
+
+| Paramètre | Rôle | Exemple / Interprétation |
+|------------|------|---------------------------|
+| **External Acceleration** | Force constante exercée sur le tissu selon les axes X, Y, Z. | `(80, 5, 0)` crée un vent dominant vers la droite avec une légère poussée verticale. |
+| **Random Acceleration** | Force variable qui perturbe le vent constant. | `(100, 5, 20)` ajoute des fluctuations pour un effet turbulent. |
+| **Contraintes du tissu** | Sommets fixés au mât du drapeau. | Empêchent le drapeau de s’envoler. |
+
+ Le vent constant (80 en X) est modifié aléatoirement par ±100, donnant des valeurs entre **−20 et +180**.  
+ Cela crée un mouvement de drapeau **fluide mais irrégulier**, reproduisant le comportement naturel du tissu dans le vent.
+
+---
+
+## Conclusion
+Ce TD illustre comment utiliser le **système de Cloth Physics** d’Unity pour animer un drapeau de manière réaliste.  
+En combinant **gravité**, **contraintes de sommets**, et **forces externes aléatoires**, il est possible de créer des effets de vent dynamiques et crédibles.  
+Ces techniques peuvent également être appliquées à d’autres objets souples : **rideaux, voiles, capes, draperies, etc.**
+
+
 ## Fondamentaux du Vent dans les Systèmes Physiques
 
 ### Théorique :
