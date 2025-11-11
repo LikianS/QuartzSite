@@ -3,9 +3,6 @@ title: TD 1 – Implémentation d'un simple générateur de noms de gobelins
 draft: false
 ---
 
-# Lab 2 – TD1 Implémentation d'un simple générateur de noms de gobelins
-
-
 ## Objectif du TP
 
 L’objectif de ce TP est de concevoir un générateur procédural de noms de gobelins pour un jeu de rôle (RPG).  

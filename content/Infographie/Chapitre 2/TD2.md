@@ -3,6 +3,8 @@ title: TD 2 – Bruit de Perlin intégré à Unity
 draft: false
 ---
 
+# Lab 2 – TD 2 Bruit de Perlin intégré à Unity
+
 ## Objectif du TP
 
 L’objectif de ce TD est de découvrir et d’expérimenter le **bruit de Perlin** dans Unity, afin de comprendre comment il peut être utilisé pour générer du contenu procédural cohérent, naturel et fluide.  
