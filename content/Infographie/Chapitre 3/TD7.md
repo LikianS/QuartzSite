@@ -3,8 +3,6 @@ title: TD 7 – Hisser le drapeau
 draft: false
 ---
 
-# TD 7 : Hisser le drapeau
-
 ## Fondamentaux du Vent dans les Systèmes Physiques
 
 ### Théorique :

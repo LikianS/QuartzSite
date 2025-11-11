@@ -3,8 +3,6 @@ title: TD 6 – Nuages volumétriques
 draft: false
 ---
 
-# TD 6 : Nuages volumétriques
-
 ## Principes de base des nuages volumétriques
 
 ### Théorique :

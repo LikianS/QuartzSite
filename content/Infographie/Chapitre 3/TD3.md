@@ -3,7 +3,83 @@ title: TD 3 – Génération procédurale de villes
 draft: false
 ---
 
-# Lab 3 – TD3 Génération procédurale de villes
+## Objectif du TD
+Ce TD a pour objectif de découvrir la **génération procédurale de villes** dans Unity, en utilisant le **bruit de Perlin** pour déterminer la position et la densité des bâtiments.  
+La méthode est inspirée du travail de Müller et Parish et du logiciel **CityEngine**.
+
+---
+
+## Étapes principales de la génération de ville
+
+### **1. Création du projet**
+- Créer un nouveau projet Unity.
+- Importer le package **Character Controller**.
+- Ajouter une capsule et un **First Person Controller (FPC)**.
+- Positionner le FPC juste au-dessus du plan et ajouter une lumière directionnelle.
+
+👉 **IMAGE 1 TD2** : capsule et FPC positionnés dans la scène (référence TD2).
+
+---
+
+### **2. Préparation du terrain**
+- Importer le fichier `Perlin_noise.cs` dans un dossier **Plugins**.
+- Créer un fichier `MakeCity.cs` basé sur le TD2 (`MakeTerrain.cs`) mais pour générer une ville.
+- Tester la scène : le terrain surélevé est affiché, prêt à accueillir des bâtiments.
+
+---
+
+### **3. Attribution des valeurs de Perlin**
+- Les valeurs du bruit de Perlin sont comprises entre **-4 et 4**.
+- Ces valeurs seront utilisées pour déterminer quel type de bâtiment placer à chaque point.
+- Télécharger ou importer huit modèles de bâtiments (ex. TurboSquid ou dossier partagé `buildings.zip`).
+
+---
+
+### **4. Création de préfabriqués**
+- Ajouter chaque bâtiment à la scène.
+- Ajuster l’échelle et la rotation pour chaque bâtiment.
+- Créer **huit préfabriqués**, un par bâtiment, en les faisant glisser de la hiérarchie vers le projet.
+
+---
+
+### **5. Placement procédural des bâtiments**
+- Modifier `MakeCity.cs` pour utiliser les préfabriqués et les valeurs du bruit de Perlin.  
+- Les bâtiments sont instanciés sur le plan selon les valeurs calculées.  
+- La valeur du Perlin détermine la densité et la taille relative des bâtiments :
+  - **Valeurs élevées (blanc)** → gratte-ciel et bâtiments denses.
+  - **Valeurs faibles (noir)** → petites maisons et zones moins denses.
+
+---
+
+### **6. Configuration dans l’inspecteur**
+- Sélectionner l’objet **plan** dans la hiérarchie.
+- Définir la taille du tableau **Buildings** sur 8.
+- Glisser-déposer chaque préfabriqué de bâtiment dans les éléments du tableau.
+- Le script s’adapte automatiquement au nombre de préfabriqués fournis.
+
+---
+
+### **7. Résultat final**
+- Tester le gameplay.
+- Une ville générée de manière procédurale apparaît sur le terrain.
+
+👉 **IMAGE 1** : ville générée procéduralement avec différents bâtiments répartis selon les valeurs du bruit de Perlin.
+
+---
+
+### Remarques importantes
+- Le bruit de Perlin crée des zones lisses et continues, ce qui permet de moduler la **densité urbaine**.
+- Les zones blanches du Perlin correspondent aux quartiers denses avec des gratte-ciels.  
+- Les zones noires correspondent aux quartiers peu peuplés avec de petites maisons.  
+- Cette méthode permet de générer rapidement et automatiquement une ville relativement réaliste à partir d’un terrain.
+
+---
+
+## Conclusion
+Ce TD illustre comment le **bruit de Perlin** peut être utilisé au-delà des terrains, pour générer **des villes procédurales** avec une densité et une variété de bâtiments réalistes.  
+Cette approche offre une base solide pour créer des environnements urbains dans des jeux ou des simulations 3D.
+
+
 
 ## Génération procédurale de villes
 

@@ -3,8 +3,6 @@ title: TD 2 – Bruit de Perlin intégré à Unity
 draft: false
 ---
 
-# Lab 2 – TD 2 Bruit de Perlin intégré à Unity
-
 ## Objectif du TP
 
 L’objectif de ce TD est de découvrir et d’expérimenter le **bruit de Perlin** dans Unity, afin de comprendre comment il peut être utilisé pour générer du contenu procédural cohérent, naturel et fluide.  
@@ -20,7 +18,7 @@ Unity propose une implémentation native du bruit de Perlin via la fonction :
 Cette fonction retourne une valeur comprise entre **0 et 1**, correspondant à un échantillon du plan de bruit 2D.  
 En modifiant les coordonnées `xCoord` et `yCoord`, on peut explorer ce plan de bruit comme une carte infinie.
 
-🔹 **Caractéristiques principales :**
+**Caractéristiques principales :**
 - Génère un **bruit 2D continu et lissé** (pas de transitions brutales).  
 - Ne couvre **que la version 2D** du bruit de Perlin.  
 - Pour un bruit 3D, il faut utiliser une implémentation externe ou la coder soi-même.

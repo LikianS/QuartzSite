@@ -3,8 +3,6 @@ title: TD 3 – Générateur de grottes procédural
 draft: false
 ---
 
-# Lab 2 – TD 3 Générateur de grottes procédural
-
 ## 1. Objectif du TD
 
 L’objectif de ce TD est d’implémenter un **générateur de grottes procédural** dans Unity, basé sur les **automates cellulaires** pour la génération de la carte et un **système de rendu en maillage 3D**.  
@@ -52,7 +50,7 @@ Deux ensembles de règles sont utilisés :
 - **Mode normal** : crée des structures complexes et variées.
 - **Mode clean** : applique des règles supplémentaires pour lisser les parois et supprimer les grandes cavités.
 
-🔹 **Touches de contrôle :**
+**Touches de contrôle :**
 - `Espace` : applique les règles de l’AC (version “clean”).
 - `G` : applique la version normale.
 - `N` : régénère complètement la carte.
