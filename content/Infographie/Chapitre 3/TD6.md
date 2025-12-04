@@ -31,8 +31,6 @@ L’objectif est de comprendre comment configurer et ajuster les paramètres de 
 - Appuyez sur **Play** : vous verrez apparaître le **volume de nuages au-dessus du terrain**, comme illustré dans la **Figure 1**.  
   Le CloudsToy Mngr s’adapte automatiquement pour couvrir toute la surface du terrain.
 
-👉 **FIG 1.** CloudsToy générant des nuages volumétriques au-dessus du terrain.
-
 ---
 
 ### **4. Ajout du joueur**
@@ -80,6 +78,7 @@ Le **CloudsToy Mngr** peut être intégré dans n’importe quel projet Unity en
 Le **CloudsToy Manager** permet de créer des **nuages volumétriques réalistes et dynamiques** en quelques étapes.  
 Grâce à ses paramètres flexibles (taille, couleur, vitesse, densité), il est possible d’obtenir des **ambiances atmosphériques variées** : du ciel orageux dramatique à une brume douce au lever du soleil.
 
+![alt text](image-7.png)
 
 ## Principes de base des nuages volumétriques
 

@@ -17,8 +17,6 @@ La méthode est inspirée du travail de Müller et Parish et du logiciel **CityE
 - Ajouter une capsule et un **First Person Controller (FPC)**.
 - Positionner le FPC juste au-dessus du plan et ajouter une lumière directionnelle.
 
-👉 **IMAGE 1 TD2** : capsule et FPC positionnés dans la scène (référence TD2).
-
 ---
 
 ### **2. Préparation du terrain**
@@ -63,8 +61,6 @@ La méthode est inspirée du travail de Müller et Parish et du logiciel **CityE
 - Tester le gameplay.
 - Une ville générée de manière procédurale apparaît sur le terrain.
 
-👉 **IMAGE 1** : ville générée procéduralement avec différents bâtiments répartis selon les valeurs du bruit de Perlin.
-
 ---
 
 ### Remarques importantes
@@ -79,7 +75,11 @@ La méthode est inspirée du travail de Müller et Parish et du logiciel **CityE
 Ce TD illustre comment le **bruit de Perlin** peut être utilisé au-delà des terrains, pour générer **des villes procédurales** avec une densité et une variété de bâtiments réalistes.  
 Cette approche offre une base solide pour créer des environnements urbains dans des jeux ou des simulations 3D.
 
-
+<video controls src="Labs - chap3 - TD3 - Windows, Mac, Linux - Unity 2023.2.20f1 _DX11_ 2025-12-04 23-21-03.mp4" title="Title"></video>
+![alt text](image-2.png)
+![alt text](image-3.png)
+![alt text](image-4.png)
+![alt text](image-5.png)
 
 ## Génération procédurale de villes
 
@@ -109,7 +109,7 @@ Pour qu’une ville soit réaliste, il faut essayer de ne pas avoir de patern qu
 
 ### Pratique :
 
-Il faudra placer les maisons a le bord des routes avec un espace pour le trottoir. De plus les bâtiments doivent etre espacés assez pour laissez une zone de jardin autour. Ajouté des props dans la rue et les jardin permettrais d’ajouté de la vie et du réalisme. Le fait de d’ajouter des angles différent a chaque virage de route permet de rendre moins monotone la ville.
+Il faudra placer les maisons au bord des routes avec un espace pour le trottoir. De plus les bâtiments doivent etre espacés assez pour laissez une zone de jardin autour. Ajouté des props dans la rue et les jardin permettrais d’ajouté de la vie et du réalisme. Le fait de d’ajouter des angles différent a chaque virage de route permet de rendre moins monotone la ville.
 
 ## Génération procédurale de villes et optimisation de la latence
 

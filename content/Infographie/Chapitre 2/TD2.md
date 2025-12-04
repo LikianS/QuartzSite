@@ -23,8 +23,6 @@ En modifiant les coordonnées `xCoord` et `yCoord`, on peut explorer ce plan de 
 - Ne couvre **que la version 2D** du bruit de Perlin.  
 - Pour un bruit 3D, il faut utiliser une implémentation externe ou la coder soi-même.
 
-👉 **IMAGE 1 ICI** : capture d’une **texture générée** avec le bruit de Perlin (grayscale, nuances de gris).
-
 ---
 
 ## Génération d’une texture procédurale
@@ -43,8 +41,6 @@ Cette méthode est idéale pour simuler :
 - des **textures organiques**,  
 - ou encore des **motifs naturels** tels que les nuages ou la pierre.
 
-👉 **IMAGE 2 ICI** : capture d’écran montrant la **texture du bruit de Perlin affichée dans Unity**.
-
 ---
 
 ## Animation avec le bruit de Perlin (Bobbling)
@@ -58,8 +54,6 @@ Le principe :
 - La valeur obtenue contrôle la hauteur de l’objet.
 
 Cela produit un **mouvement sinueux et fluide**, contrairement à un déplacement purement aléatoire, qui serait saccadé.
-
-👉 **IMAGE 3 ICI** : capture d’une **sphère se déplaçant doucement de haut en bas** grâce au bruit de Perlin.
 
 ---
 
@@ -85,3 +79,5 @@ Ce TD a permis de comprendre comment le **bruit de Perlin** peut servir de fonda
 - Simulation de phénomènes naturels.  
 
 Grâce à sa continuité et à sa flexibilité, le bruit de Perlin constitue une **pierre angulaire du réalisme procédural** dans le développement de jeux vidéo.
+
+<video controls src="Labs2 - chap2 - Perlin - Windows, Mac, Linux - Unity 2023.2.20f1 _DX11_ 2025-12-04 23-09-13.mp4" title="Title"></video>

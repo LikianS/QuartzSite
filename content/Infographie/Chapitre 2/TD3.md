@@ -28,8 +28,6 @@ Cette fonction initialise la carte avec des cellules aléatoires :
 - Une ligne centrale est laissée vide pour assurer une connexion entre les zones.
 - Le reste des cellules est aléatoirement défini comme mur (`1`) ou vide (`0`), selon la graine choisie.
 
-📘 *Figure 1 – L’état initial de la carte après génération aléatoire.*
-
 ---
 
 ### Fonctions utilitaires
@@ -54,8 +52,6 @@ Deux ensembles de règles sont utilisés :
 - `Espace` : applique les règles de l’AC (version “clean”).
 - `G` : applique la version normale.
 - `N` : régénère complètement la carte.
-
-📘 *Figure 2 – Exemple de grotte générée aléatoirement.*
 
 ---
 
@@ -88,11 +84,6 @@ Ainsi, une carte de 200x200 pourrait générer jusqu’à **40 000 cubes**, ce q
 3. **Fusion des cubes** en un seul maillage avec `CombineMeshes` pour optimiser les performances.  
 4. **Nettoyage mémoire** : suppression des objets cubes individuels après la fusion.
 
-📘 *Figure 3 – Hiérarchie de la scène (CaveGen) avec CaveGenerator et WallGenerator.*  
-📘 *Figure 4 – Configuration des composants et paramètres.*  
-📘 *Figure 5 – Exemple de rendu initial avec les cubes.*  
-📘 *Figure 6 – Carte finale après plusieurs itérations de l’AC.*
-
 ---
 
 ## 6. Optimisation avec Marching Squares
@@ -103,8 +94,6 @@ Pour résoudre le problème du grand nombre de sommets et d’objets, on introdu
 - **Rendu plus fluide** : les murs sont arrondis et continus.  
 - **Moins de sommets** : le maillage est plus léger et rapide à afficher.  
 - **Facile à intégrer** : il suffit de remplacer `WallGenerator` par `MarchingCubesGenerator`.
-
-📘 *Figure 7 – Rendu final avec MarchingCubesGenerator (murs lissés et meilleure performance).*
 
 ---
 
@@ -123,3 +112,6 @@ Ce TD illustre le **pouvoir de la génération procédurale** dans les jeux vid�
 Grâce à un simple automate cellulaire et quelques itérations, il est possible de produire des **environnements complexes, variés et immersifs**.  
 L’ajout du **rendu Marching Squares** améliore encore les performances et la qualité visuelle, préparant la base pour des systèmes plus avancés de **génération de mondes dynamiques**.
 """
+
+<video controls src="Labs2 - chap2 - CaveScene-Simple - Windows, Mac, Linux - Unity 2023.2.20f1 _DX11_ 2025-12-04 23-15-37.mp4" title="Title"></video>
+<video controls src="Labs2 - chap2 - CaveScene - Windows, Mac, Linux - Unity 2023.2.20f1 _DX11_ 2025-12-04 23-17-37.mp4" title="Title"></video>

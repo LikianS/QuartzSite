@@ -34,15 +34,11 @@ On apprend à créer un terrain réaliste à l’aide de fonctions mathématique
 Observation :  
 Cette méthode crée un terrain **dentelé** si l’amplitude des valeurs aléatoires est trop élevée.
 
-👉 **IMAGE 2 ICI** : terrain avec hauteurs aléatoires.
-
 ---
 
 ### **4. Terrain sinusoïdal**
 - Une fonction **sinusoïdale** est appliquée pour obtenir un relief plus lisse et régulier.
 - Le résultat est uniforme mais manque de réalisme.
-
-👉 **IMAGE 3 ICI** : terrain avec relief sinusoïdal.
 
 ---
 
@@ -53,9 +49,6 @@ Cette méthode crée un terrain **dentelé** si l’amplitude des valeurs aléat
 Observation :  
 Le bruit de Perlin permet d’obtenir des **reliefs plus naturels** par rapport à une simple valeur aléatoire.
 
-👉 **IMAGE 4 ICI** : représentation graphique du bruit de Perlin (niveaux de gris).  
-👉 **IMAGE 5 ICI** : terrain généré dans Unity avec le bruit de Perlin.
-
 ---
 
 ### **6. Comparaison des méthodes**
@@ -63,8 +56,7 @@ Le bruit de Perlin permet d’obtenir des **reliefs plus naturels** par rapport 
 - **Fonction sinusoïdale** : relief lisse mais trop uniforme.  
 - **Bruit de Perlin** : relief varié et naturel, idéal pour la génération procédurale de terrains.
 
-👉 **IMAGE 6 ICI** : comparaison visuelle (aléatoire vs sinusoïde vs Perlin).
-
+![alt text](image.png)
 ---
 
 ## Résumé des apprentissages

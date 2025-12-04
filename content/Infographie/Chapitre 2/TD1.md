@@ -52,8 +52,6 @@ Le texte s’actualise automatiquement au lancement du jeu et à chaque pression
 3. Créer un **TextMeshPro** (GameObject → UI → Text - TextMeshPro) et le relier au champ `textMesh`.
 4. Ajouter les métiers dans la liste `goblinJobs` (par exemple : warrior, archer, blacksmith, shaman).
 
-👉 **IMAGE 1 ICI** : capture de l’Inspecteur Unity avec les propriétés `textMesh`, `goblinJobs`, et `goblinMaxAge` renseignées.
-
 ---
 
 ## Résultat obtenu
@@ -62,8 +60,6 @@ Au lancement du jeu, un texte s’affiche à l’écran, par exemple :
 > “Fizdiebles Gearbomb is a 87 years old goblin blacksmith.”
 
 Chaque pression sur la barre d’espace génère un nouveau gobelin avec un nom, un âge et un métier aléatoires.
-
-👉 **IMAGE 2 ICI** : capture du résultat à l’écran (texte généré).
 
 ---
 
@@ -85,8 +81,6 @@ Ce TP illustre les bases de la génération procédurale :
 - Utilisation du hasard contrôlé,  
 - Similitude avec les tables aléatoires du *Donjon & Dragons Dungeon Master’s Guide*.
 
-👉 **IMAGE 3 (optionnelle)** : plusieurs exemples de gobelins générés (collage de 3–4 résultats).
-
 ---
 
 ## Conclusion
@@ -97,3 +91,4 @@ Le générateur de noms de gobelins :
 - Évite la redondance,  
 - Et prépare le terrain pour des systèmes procéduraux plus complexes.
 
+<video controls src="Labs2 - chap2 - Goblin - Windows, Mac, Linux - Unity 2023.2.20f1 _DX11_ 2025-12-04 23-07-49.mp4" title="Title"></video>

@@ -27,8 +27,6 @@ Le panneau **Terrain** contient plusieurs outils principaux :
 | 3 | **Outil de détails** | Permet d’ajouter des **plantes, fleurs et roches**. |
 | 4 | **Paramètres du terrain** | Contrôle les **niveaux de détail (LOD)** et le **rendu des arbres** (billboards ou 3D). |
 
-👉 **IMAGE 1 ICI** : capture d’écran du panneau des outils de terrain dans Unity.
-
 ---
 
 ### **3. Sculpture du relief**
@@ -37,9 +35,6 @@ Le panneau **Terrain** contient plusieurs outils principaux :
 - **Clic gauche** : soulève le terrain.  
 - **MAJ + clic gauche** : abaisse le terrain.
 
-
-👉 **IMAGE 2 ICI** : placement d’une photo de référence (par ex. le Mont Fuji).  
-👉 **IMAGE 3 ICI** : terrain sculpté pour correspondre à la photographie.
 
 ---
 
@@ -53,9 +48,6 @@ Une fois le relief terminé, on applique des **textures sans couture** pour donn
 
 💡 La première texture ajoutée recouvre tout le terrain : il est donc conseillé de choisir une **texture dominante** (ex. herbe ou terre).
 
-👉 **IMAGE 4 ICI** : capture d’écran de l’ajout d’une texture.  
-👉 **IMAGE 5 ICI** : terrain peint avec différentes textures selon la hauteur.
-
 ---
 
 ### **5. Ajout de végétation (arbres, herbe, fleurs)**
@@ -65,14 +57,10 @@ Une fois le relief terminé, on applique des **textures sans couture** pour donn
 
 Observation :  
 Les arbres sont plus denses près du lac et disparaissent en altitude, simulant un **écosystème réaliste**.
-
-👉 **IMAGE 6 ICI** : capture de la répartition des arbres selon la hauteur.
-
+  
 Ensuite :
 - Utiliser l’**outil 3** pour ajouter **herbe et fleurs**.
 - Peindre autour du lac pour créer une **zone de transition** entre l’eau et la terre.
-
-👉 **IMAGE 7 ICI** : ajout d’herbes et de fleurs autour du lac.
 
 ---
 
@@ -85,8 +73,6 @@ Une fois importé :
 - Glisser le prefab dans la scène.
 - Le **redimensionner** et le **placer** dans la zone du lac.
 
-👉 **IMAGE 8 ICI** : eau stylisée placée devant le Mont Fuji.
-
 ---
 
 ### **7. Finalisation du terrain**
@@ -94,7 +80,6 @@ Une fois importé :
 - Ajouter un **Prefab FirstPersonController** pour explorer la scène.  
 - Lancer le mode **Play** pour découvrir le rendu final.
 
-👉 **IMAGE 9 ICI** : résultat final du terrain reconstitué avec textures, végétation et eau.
 
 ---
 

@@ -14,15 +14,11 @@ Ce TD a pour objectif de découvrir l’application d’**effets de post-traitem
 - Télécharger la **stack de post-traitement** depuis l’Asset Store Unity (ou via le lien fourni dans l’annexe).
 - Le terrain créé dans les TD précédents peut servir de base pour ajouter les effets.
 
-👉 **FIG 1** : Plugin de pile de post-traitement d’Unity.
-
 ---
 
 ### **2. Ajout du composant Post-Processing Behaviour**
 - Sélectionner la **caméra principale** dans la hiérarchie.
 - Dans l’inspecteur, ajouter le composant **Comportement de post-traitement**.
-
-👉 **FIG 2** : Ajout du composant Post-Processing Behaviour à la caméra.
 
 ---
 
@@ -30,9 +26,6 @@ Ce TD a pour objectif de découvrir l’application d’**effets de post-traitem
 - Dans le projet, créer un **nouveau profil** : clic droit > Créer > Profil de post-traitement.
 - Renommer le profil selon vos préférences.
 - Le sélectionner pour examiner ses propriétés dans l’inspecteur.
-
-👉 **FIG 3** : Création d’un profil de post-traitement.  
-👉 **FIG 4** : Définition des paramètres du profil (ex. brouillard, Ambient Occlusion, Depth of Field).
 
 - Glisser-déposer le profil sur le composant **Post-Processing Behaviour** de la caméra pour appliquer les effets à la scène.
 
@@ -46,8 +39,6 @@ Ce TD a pour objectif de découvrir l’application d’**effets de post-traitem
   - **Profondeur de champ**
 - Ces effets améliorent fortement la qualité visuelle, donnant un rendu plus professionnel.
 
-👉 **FIG 5** : Comparaison du terrain sans (gauche) et avec (droite) le profil de post-traitement.
-
 ---
 
 ### Remarques importantes
@@ -60,6 +51,8 @@ Ce TD a pour objectif de découvrir l’application d’**effets de post-traitem
 ## Conclusion
 L’ajout de post-traitement est une étape clé pour **améliorer l’esthétique d’un jeu**. Même des effets simples comme le brouillard, l’occlusion ambiante et la profondeur de champ peuvent considérablement rehausser la qualité d’une scène Unity.
 
+![alt text](image-6.png)
+<video controls src="Labs - chap3 - TD4 - question4 - Windows, Mac, Linux - Unity 2023.2.20f1 _DX11_ 2025-12-04 22-51-55.mp4" title="Title"></video>
 
 ## Compréhension des fondamentaux :
 

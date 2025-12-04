@@ -11,73 +11,94 @@ L’objectif de ce TD est d'apprendre à **créer et configurer des systèmes de
 ## Étapes principales : Création de la fumée de cheminée
 
 ### **1. Préparation de la scène**
-- [cite_start]Récupérez le fichier `Particles.zip` et ouvrez la scène `SnowyRetreat` dans Unity[cite: 475].
-- [cite_start]Vous y trouverez un paysage enneigé, des arbres et une cabane en rondins[cite: 476].
+- Récupérez le fichier `Particles.zip` et ouvrez la scène **SnowyRetreat** dans Unity.
+- Vous y trouverez un paysage enneigé, des arbres et une cabane en rondins.
 
-### **2. Ajout du système de particules "Fumée"**
-- [cite_start]Dans le menu principal, sélectionnez **GameObject > Effets > Système de particules**[cite: 477].
-- [cite_start]Un système de particules par défaut sera ajouté à la scène[cite: 478].
-- [cite_start]Positionnez le point de départ du système de particules (l'émetteur) dans la cheminée de la cabine[cite: 499].
-- [cite_start]**Position de la transformation** : Réglez la position sur `(1190, 30, 1180)` pour le placer au bon endroit[cite: 500].
-
-### **3. Application du matériau de fumée**
-- [cite_start]Créez un nouveau matériau[cite: 503].
-- [cite_start]Appliquez-lui la texture de bouffée de fumée que vous trouverez dans le projet[cite: 503].
-- [cite_start]Définissez l'ombrage du matériau sur **Particules/Additif**[cite: 504, 505].
-- [cite_start]Faites glisser et déposez le nouveau matériau sur le système de particules[cite: 505]. [cite_start]Les petits points blancs se transformeront en bouffées de fumée[cite: 506].
-
-### **4. Ajustement de la taille de la fumée (Start Size & Size over Lifetime)**
-- [cite_start]Dans l’inspecteur, modifiez la **taille de particule de départ** (**Start Size**) à `5`[cite: 507].
-- [cite_start]Activez l'option **Size over Lifetime** pour simuler la croissance de la fumée en s'éloignant de l'émetteur[cite: 508, 509].
-- [cite_start]Ouvrez l'éditeur de particules (**Open Editor...**)[cite: 510].
-- [cite_start]Activez l'option **Taille sur la durée de vie** (**Size over Lifetime**)[cite: 417].
-- [cite_start]Modifiez la courbe de taille : déplacez le point de contrôle initial jusqu'à environ `0.3`[cite: 418].
-
-### **5. Configuration de la durée de vie et de l'émetteur**
-- [cite_start]Modifiez la **durée de vie initiale** (**Start Lifetime**) à `15` pour que la fumée monte plus haut avant de disparaître[cite: 421, 422].
-- [cite_start]Pour condenser la fumée en un jet plus étroit, allez dans les paramètres de **Shape** (Forme) et définissez la valeur de **Angle** à `10` (l'émetteur est un cône)[cite: 423, 424].
-
-### **6. Masquer l'effet de disparition (Color over Lifetime)**
-- [cite_start]Activez l'option **Couleur sur la durée de vie** (**Color over Lifetime**)[cite: 428].
-- [cite_start]Ouvrez l'éditeur de dégradé[cite: 429].
-- [cite_start]Sélectionnez le pointeur en haut à droite du nuancier de couleur et définissez son **alpha sur 0** pour que la fumée s'estompe en douceur au lieu de s'arrêter brusquement[cite: 430, 431, 432].
-
-### **7. Finalisation et densité de la fumée**
-- [cite_start]Pour augmenter l'épaisseur de la fumée, augmentez la **taille de départ** (**Start Size**) à `20`[cite: 434].
-- [cite_start]Ajustez la courbe **Taille sur la durée de vie** pour que la fumée commence petite à la sortie de la cheminée et grossisse plus rapidement à l'extérieur[cite: 434, 435].
-- [cite_start]*Astuce : Cliquez avec le bouton droit de la souris sur la courbe pour ajouter une nouvelle touche et mieux manipuler la croissance de la taille*[cite: 435].
+### **2. Ajout et positionnement du système de particules "Fumée"**
+- Dans le menu principal, sélectionnez **GameObject > Effets > Système de particules**.
+- Un système de particules par défaut sera ajouté à la scène.
+- Positionnez le point de départ du système de particules (l'émetteur) dans la cheminée de la cabine.
+- **Position de la transformation** : Réglez la position sur `(1190, 30, 1180)` pour le placer au bon endroit.
 
 ---
 
-## Les Systèmes de Particules dans les Environnements Immersifs
+### **3. Application du matériau de fumée**
+- Créez un nouveau **matériau**.
+- Appliquez-lui la texture de bouffée de fumée que vous trouverez dans le projet.
+- Définissez l'ombrage du matériau sur **Particules/Additif**.
+- Faites glisser et déposez le nouveau matériau sur le système de particules. Les petits points blancs se transformeront en bouffées de fumée.
 
-### Création d’effets de pluie et de neige
+---
 
-#### Théorique :
-[cite_start]Définissez les paramètres de base des systèmes de particules dans Unity pour créer des effets réalistes de neige et de pluie[cite: 457, 458].
+### **4. Ajustement de la taille (Start Size & Size over Lifetime)**
+- Dans l’inspecteur, modifiez la **taille de particule de départ** (**Start Size**) à `5`.
+- Activez l'option **Size over Lifetime** (Taille sur la durée de vie) pour simuler la croissance de la fumée.
+- Ouvrez l'éditeur de particules (**Open Editor...**).
+- Modifiez la courbe de taille : déplacez le point de contrôle initial jusqu'à environ `0.3` (pour une fumée qui grossit).
 
-#### Pratique :
-[cite_start]Décrivez la méthodologie pour la création d'un système de particules de neige en utilisant les paramètres de base (taille, vitesse, durée de vie...)[cite: 461].
+### **5. Configuration de la durée de vie et de l'émetteur**
+- Modifiez la **durée de vie initiale** (**Start Lifetime**) à `15` pour que la fumée monte plus haut.
+- Pour condenser la fumée en un jet plus étroit, allez dans les paramètres de **Shape** (Forme) et définissez la valeur de **Angle** à `10` (l'émetteur est un cône).
+
+---
+
+### **6. Masquer l'effet de disparition (Color over Lifetime)**
+- Activez l'option **Couleur sur la durée de vie** (**Color over Lifetime**).
+- Ouvrez l'éditeur de dégradé.
+- Sélectionnez le pointeur en haut à droite du nuancier de couleur et définissez son **alpha sur 0** pour que la fumée s'estompe en douceur.
+
+### **7. Finalisation et densité de la fumée**
+- Pour augmenter l'épaisseur de la fumée, augmentez la **taille de départ** (**Start Size**) à `20`.
+- Ajustez la courbe **Taille sur la durée de vie** pour que la fumée commence petite et grossisse plus rapidement à l'extérieur.
+
+<video controls src="Labs - chap8 - SnowyRetreat - Windows, Mac, Linux - Unity 2023.2.20f1_ _DX11_ 2025-12-04 23-04-04.mp4" title="Title"></video>
+<video controls src="Labs - chap8 - SnowyRetreat - Windows, Mac, Linux - Unity 2023.2.20f1_ _DX11_ 2025-12-04 23-05-56.mp4" title="Title"></video>
+---
+
+## Questions Théoriques et Pratiques
+
+### Fondamentaux des Systèmes de Particules
+### Théorique :
+Un système de particules est crucial pour simuler des phénomènes naturels et des effets visuels complexes qui seraient difficiles à modéliser avec des géométries traditionnelles. Ils fonctionnent en émettant de nombreuses petites entités (particules) qui peuvent être contrôlées individuellement ou en groupe pour créer des effets dynamiques tels que la fumée, le feu, la pluie, etc. Dans Unity, les systèmes de particules utilisent des émetteurs pour générer des particules avec des propriétés définies (taille, couleur, vitesse, durée de vie) et permettent une grande flexibilité grâce à divers modules de configuration.
+
+### Pratique :
+Créez un système de particules basique dans Unity qui simule une averse légère, avec des gouttes de pluie tombant verticalement ou légèrement inclinées en fonction du vent. Quels paramètres ajustez-vous pour obtenir un effet réaliste ?
+Exemple des paramètres à ajuster :
+- Vitesse des particules : Augmentez légèrement pour simuler la chute rapide des gouttes de pluie.
+- Taille des particules : Réduisez pour refléter la finesse des gouttes d'eau.
+- Transparence : Ajustez pour un effet plus réaliste de l'eau, avec une légère opacité.
+- Direction et Variation : Modifiez pour simuler l'effet du vent sur la pluie.
+
+---
 
 ### Optimisation des Systèmes de Particules
+### Théorique :
+Les systèmes de particules peuvent être gourmands en ressources, surtout lorsqu'ils impliquent un grand nombre de particules ou des effets complexes. Sur les plateformes mobiles, les contraintes de performance sont plus strictes, ce qui nécessite une optimisation rigoureuse. Les défis incluent la gestion du nombre de particules émises, l'utilisation efficace des shaders, et la réduction des appels de rendu. Il est crucial d'équilibrer la qualité visuelle avec les performances pour assurer une expérience utilisateur fluide.
 
-#### Théorique :
-[cite_start]Quels sont les principaux défis liés à l'optimisation des systèmes de particules dans Unity, en particulier pour les jeux destinés aux plateformes mobiles[cite: 466, 467]?
+---
 
 ### Interaction des Particules avec l'Environnement
+### Théorique :
+Les particules peuvent interagir avec l'environnement de plusieurs façons pour augmenter le réalisme et l'immersion. Par exemple, les particules de fumée peuvent être affectées par le vent, changeant de direction et de vitesse en fonction des conditions atmosphériques simulées. De plus, les particules peuvent réagir aux collisions avec d'autres objets, comme des gouttes de pluie éclaboussant lorsqu'elles touchent le sol ou des surfaces. L'utilisation de systèmes de particules basés sur la physique permet également de simuler des interactions plus complexes, telles que la dispersion des cendres dans l'air ou la formation de nuages de poussière lorsqu'un personnage court sur une surface sèche.
 
-#### Théorique :
-[cite_start]Comment les particules peuvent-elles interagir avec les éléments de l'environnement dans Unity pour créer des effets plus dynamiques et immersifs[cite: 470, 471]?
+### Pratique :
+Développez un système de particules dans Unity où les particules réagissent à un objet
+mobile (par exemple, l'eau éclaboussant lorsqu'un personnage marche à travers une flaque).
+Comment implémentez-vous cette interaction ?
 
-#### Pratique :
-Développez un système de particules dans Unity où les particules réagissent à un objet mobile (par exemple, l'eau éclaboussant lorsqu'un personnage marche à travers une flaque). [cite_start]Comment implémentez-vous cette interaction[cite: 472, 473]?
+---
 
-### Personnalisation et Créativité
+### Personnalisation et Créativité avec les Systèmes de Particules
+### Théorique :
+La personnalisation des systèmes de particules est essentielle pour permettre aux développeurs et aux artistes de créer des effets visuels uniques qui renforcent l'identité artistique d'un jeu vidéo. En ajustant les paramètres tels que la taille, la couleur, la vitesse, la durée de vie et le comportement des particules, les créateurs peuvent concevoir des effets qui correspondent parfaitement à l'ambiance et au style visuel du jeu. Par exemple, un jeu fantastique pourrait utiliser des particules lumineuses et colorées pour représenter de la magie ou des sorts, tandis qu'un jeu post-apocalyptique pourrait utiliser des particules sombres et poussiéreuses pour simuler un environnement dévasté. La capacité à personnaliser ces effets permet également de raconter une histoire visuelle plus riche et immersive.
 
-#### Théorique :
-En quoi la personnalisation des systèmes de particules est-elle déterminante pour l'expression artistique dans le développement des jeux vidéo? [cite_start]Donnez des exemples d'effets qui peuvent être réalisés[cite: 476, 477, 478].
+---
 
-### Avancées Technologiques et Tendances
+### Avancées Technologiques et Tendances dans les Systèmes de Particules
+### Théorique :
+Quelles sont les dernières avancées et tendances en matière de systèmes de particules dans le développement de jeux vidéo, et comment Unity les accommode-t-il ?
 
-#### Théorique :
-[cite_start]Quelles sont les dernières avancées et tendances en matière de systèmes de particules dans le développement de jeux vidéo, et comment Unity les accommode-t-il[cite: 483, 484]?
+Ces dernières années, les systèmes de particules ont vu des avancées significatives grâce à l'intégration de technologies telles que le GPU computing, qui permet de gérer un plus grand nombre de particules avec une meilleure performance. Unity a intégré des fonctionnalités avancées dans son système de particules, comme le support des shaders personnalisés, les simulations basées sur la physique, et l'utilisation de la technologie VFX Graph pour créer des effets visuels complexes et interactifs. De plus, Unity facilite l'intégration de systèmes de particules avec d'autres aspects du moteur, tels que l'éclairage dynamique et les effets post-traitement, permettant ainsi aux développeurs de créer des environnements visuellement riches et immersifs.
+
+### Pratique :
+Intégrez une fonctionnalité récente des systèmes de particules de Unity dans un projet pour améliorer un effet existant ou en créer un nouveau. Quelle est cette fonctionnalité et comment l'avez-vous appliquée ?
