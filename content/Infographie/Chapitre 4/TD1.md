@@ -99,3 +99,6 @@ float diffuseIntensity = saturate(dot(normal, -DirectionalLight.xyz)) * Directio
 
 // Retour de la couleur finale éclairée
 return SurfaceColor * diffuseIntensity;
+
+
+<video controls src="tds-chap4-scratch - GeometricShapes - Windows, Mac, Linux - Unity 2023.2.20f1 _DX11_ 2025-12-06 20-01-20.mp4" title="Title"></video>

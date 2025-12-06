@@ -148,6 +148,10 @@ public override void Render(CommandBuffer commandBuffer, int kernelHandle) {
 // La fonction Cleanup doit libérer le _shapesBuffer.Dispose()
 ```
 
+<video controls src="tds-chap4-scratch - GeometricShapes - Windows, Mac, Linux - Unity 2023.2.20f1_ _DX11_ 2025-12-06 20-44-21.mp4" title="Title"></video>
+![alt text](image.png)
+![alt text](image-1.png)
+<video controls src="tds-chap4-scratch - GeometricShapes - Windows, Mac, Linux - Unity 2023.2.20f1 _DX11_ 2025-12-06 22-40-40.mp4" title="Title"></video>
 -----
 
 ## Questions Théoriques et Pratiques
