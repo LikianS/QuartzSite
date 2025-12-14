@@ -50,7 +50,7 @@ J'ai installé Git (déjà présent sur Ubuntu, mais vérifié via `sudo apt ins
 ## 4. Observations et Conclusion
 L'utilisation de WSL offre une expérience beaucoup plus fluide que Cygwin ou une machine virtuelle classique.
 * **Avantage :** Je peux utiliser les commandes Linux natives (`ls`, `grep`, `ssh`) sans configuration complexe.
-* **Point d'attention :** J'ai bien noté qu'il faut travailler dans le système de fichiers Linux (`/home/badr/...`) plutôt que sur le disque Windows (`/mnt/c/...`) pour bénéficier des meilleures performances disques, surtout pour les projets Node.js (nombreux petits fichiers).
+* **Point d'attention :** J'ai bien noté qu'il faut travailler dans le système de fichiers Linux (`/home/nom/...`) plutôt que sur le disque Windows (`/mnt/c/...`) pour bénéficier des meilleures performances disques, surtout pour les projets Node.js (nombreux petits fichiers).
 
 Mon environnement est prêt pour la suite des TPs.
 
