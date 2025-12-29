@@ -85,7 +85,7 @@ docker-compose up --build
 - Database : localhost:5432
 ```
 
-<video controls src="README.md - DevOps [WSL_ Ubuntu] - Visual Studio Code 2025-12-29 16-35-54.mp4" title="Title"></video>
+<video controls src="vid 2.mp4" title="Title"></video>
 
 ---
 
@@ -132,8 +132,8 @@ kubectl logs -f pod/[pod-name]      # Logs en temps réel
 ```
 
 
-<video controls src="README.md - DevOps [WSL_ Ubuntu] - Visual Studio Code 2025-12-29 16-37-49.mp4" title="Title"></video>
-<video controls src="README.md - DevOps [WSL_ Ubuntu] - Visual Studio Code 2025-12-29 16-40-52.mp4" title="Title"></video>
+<video controls src="vid 3.mp4" title="Title"></video>
+<video controls src="vid 4.mp4" title="Title"></video>
 
 ---
 
@@ -212,9 +212,9 @@ terraform apply     # Créer l'infrastructure
 # Récupérer l'IP publique du frontend
 kubectl get svc frontend
 ```
-<video controls src="README.md - DevOps [WSL_ Ubuntu] - Visual Studio Code 2025-12-29 16-43-22.mp4" title="Title"></video>
+<video controls src="vid 5.mp4" title="Title"></video>
 ![alt text](image.png)
-<video controls src="README.md - DevOps [WSL_ Ubuntu] - Visual Studio Code 2025-12-29 16-52-08.mp4" title="Title"></video>
+<video controls src="vid 6.mp4" title="Title"></video>
 
 ---
 
@@ -815,7 +815,7 @@ npm run preview     # Aperçu du build
 npm run lint        # Vérifier le code
 ```
 
-<video controls src="frontend - Google Chrome 2025-12-29 17-09-36.mp4" title="Title"></video>
+<video controls src="Vid 1.mp4" title="Title"></video>
 
 ---
 
