@@ -85,11 +85,7 @@ docker-compose up --build
 - Database : localhost:5432
 ```
 
-**SCREENSHOTS À INSÉRER ICI :**
-- [ ] Sortie `docker-compose up` réussie
-- [ ] Interface frontend sur localhost:8080
-- [ ] Logs du backend
-- [ ] Dashboard Docker Desktop montrant les 3 conteneurs actifs
+<video controls src="README.md - DevOps [WSL_ Ubuntu] - Visual Studio Code 2025-12-29 16-35-54.mp4" title="Title"></video>
 
 ---
 
@@ -135,13 +131,9 @@ kubectl get svc                     # Voir tous les services
 kubectl logs -f pod/[pod-name]      # Logs en temps réel
 ```
 
-**SCREENSHOTS À INSÉRER ICI :**
-- [ ] Output `./scripts/deploy-local.sh`
-- [ ] Résultat `kubectl get pods` (tous les pods en Running)
-- [ ] Résultat `kubectl get svc` (services + ports)
-- [ ] Dashboard Minikube ou Kubernetes Desktop
-- [ ] Accès au frontend via Minikube (`minikube service frontend`)
-- [ ] Logs d'un pod : `kubectl logs pod/backend-xxx`
+
+<video controls src="README.md - DevOps [WSL_ Ubuntu] - Visual Studio Code 2025-12-29 16-37-49.mp4" title="Title"></video>
+<video controls src="README.md - DevOps [WSL_ Ubuntu] - Visual Studio Code 2025-12-29 16-40-52.mp4" title="Title"></video>
 
 ---
 
@@ -152,34 +144,34 @@ kubectl logs -f pod/[pod-name]      # Logs en temps réel
 ┌─────────────────────────────────────────────────────┐
 │              AZURE CLOUD INFRASTRUCTURE             │
 ├─────────────────────────────────────────────────────┤
-│                                                      │
-│  ┌─────────────────────────────────────────┐       │
-│  │     Terraform (IaC)                    │       │
-│  │  • Groupe de ressources Azure          │       │
-│  │  • Cluster AKS (managed Kubernetes)    │       │
-│  │  • Azure Container Registry (ACR)      │       │
-│  │  • PostgreSQL Azure Managed Database   │       │
-│  └─────────────────────────────────────────┘       │
-│                                                      │
-│  ┌─────────────────────────────────────────┐       │
-│  │     Cluster AKS (3 nodes)               │       │
-│  │  ┌─────────────────────────────────┐   │       │
-│  │  │  Frontend Pod (3 replicas)      │   │       │
-│  │  │  + LoadBalancer Service (IP)    │   │       │
-│  │  ├─────────────────────────────────┤   │       │
-│  │  │  Backend Pod (3 replicas)       │   │       │
-│  │  │  + ClusterIP Service            │   │       │
-│  │  ├─────────────────────────────────┤   │       │
-│  │  │  Prometheus + Grafana           │   │       │
-│  │  │  (Monitoring)                   │   │       │
-│  │  └─────────────────────────────────┘   │       │
-│  └─────────────────────────────────────────┘       │
-│                                                      │
-│  ┌─────────────────────────────────────────┐       │
-│  │  PostgreSQL Azure Managed Database      │       │
-│  │  (Multi-AZ, Auto-backup)                │       │
-│  └─────────────────────────────────────────┘       │
-│                                                      │
+│                                                     │
+│  ┌─────────────────────────────────────────┐        │
+│  │     Terraform (IaC)                     │        │
+│  │  • Groupe de ressources Azure           │        │
+│  │  • Cluster AKS (managed Kubernetes)     │        │
+│  │  • Azure Container Registry (ACR)       │        │
+│  │  • PostgreSQL Azure Managed Database    │        │
+│  └─────────────────────────────────────────┘        │
+│                                                     │
+│  ┌─────────────────────────────────────────┐        │
+│  │     Cluster AKS (3 nodes)               │        │
+│  │  ┌─────────────────────────────────┐    │        │
+│  │  │  Frontend Pod (3 replicas)      │    │        │
+│  │  │  + LoadBalancer Service (IP)    │    │        │
+│  │  ├─────────────────────────────────┤    │        │
+│  │  │  Backend Pod (3 replicas)       │    │        │
+│  │  │  + ClusterIP Service            │    │        │
+│  │  ├─────────────────────────────────┤    │        │
+│  │  │  Prometheus + Grafana           │    │        │
+│  │  │  (Monitoring)                   │    │        │
+│  │  └─────────────────────────────────┘    │        │
+│  └─────────────────────────────────────────┘        │
+│                                                     │
+│  ┌─────────────────────────────────────────┐        │
+│  │  PostgreSQL Azure Managed Database      │        │
+│  │  (Multi-AZ, Auto-backup)                │        │
+│  └─────────────────────────────────────────┘        │
+│                                                     │
 └─────────────────────────────────────────────────────┘
 ```
 
@@ -220,16 +212,9 @@ terraform apply     # Créer l'infrastructure
 # Récupérer l'IP publique du frontend
 kubectl get svc frontend
 ```
-
-**SCREENSHOTS À INSÉRER ICI :**
-- [ ] Output `terraform plan` (ressources à créer)
-- [ ] Output `terraform apply` (ressources créées)
-- [ ] Portal Azure : Groupe de ressources avec AKS
-- [ ] Portal Azure : Container Registry (images pushées)
-- [ ] `kubectl get pods` sur cluster cloud (tous running)
-- [ ] `kubectl get svc` avec LoadBalancer IP externe
-- [ ] Frontend live sur IP publique Azure
-- [ ] Grafana dashboard monitoring
+<video controls src="README.md - DevOps [WSL_ Ubuntu] - Visual Studio Code 2025-12-29 16-43-22.mp4" title="Title"></video>
+![alt text](image.png)
+<video controls src="README.md - DevOps [WSL_ Ubuntu] - Visual Studio Code 2025-12-29 16-52-08.mp4" title="Title"></video>
 
 ---
 
@@ -239,7 +224,7 @@ kubectl get svc frontend
 
 **Fichier :** `.github/workflows/ci.yml`
 
-Le pipeline CI/CD automatise l'intégralité du processus de test, build et déploiement sur chaque push vers les branches `main` ou `Killian`, ainsi que sur les pull requests.
+Le pipeline CI/CD automatise l'intégralité du processus de test, build et déploiement sur chaque push vers les branches `main` , ainsi que sur les pull requests.
 
 #### Architecture du Pipeline
 
@@ -250,8 +235,8 @@ Event (Push/PR)
 │  Job 1: backend-test                │
 │  • Setup Node.js 20                 │
 │  • npm ci (install)                 │
-│  • npm run build (TypeScript check)  │
-│  • npm test (Jest tests)             │
+│  • npm run build (TypeScript check) │
+│  • npm test (Jest tests)            │
 │  Status: PASS/FAIL                  │
 └─────────────────────────────────────┘
      ↓
@@ -259,7 +244,7 @@ Event (Push/PR)
 │  Job 2: frontend-build              │
 │  • Setup Node.js 20                 │
 │  • npm ci (install)                 │
-│  • npm run build (Vite build)        │
+│  • npm run build (Vite build)       │
 │  Status: PASS/FAIL                  │
 └─────────────────────────────────────┘
      ↓
@@ -401,8 +386,8 @@ DB_PORT: "5432"
 
 | Event | Branches | Action |
 |-------|----------|--------|
-| Push | main, Killian | Lancer tous les jobs |
-| Pull Request | main, Killian | Lancer tous les jobs sauf deploy |
+| Push | main | Lancer tous les jobs |
+| Pull Request | main | Lancer tous les jobs sauf deploy |
 | Manual | N/A | Disponible via GitHub UI |
 
 #### Workflow de Développement avec CI/CD
@@ -479,14 +464,13 @@ Message: "Run ./scripts/deploy.sh locally to create infrastructure first"
 [![CI Status](https://github.com/user/repo/workflows/CI/badge.svg)](https://github.com/user/repo/actions)
 ```
 
-**SCREENSHOTS À INSÉRER ICI :**
-- [ ] Vue GitHub Actions - Workflow réussi (tous jobs green)
-- [ ] Détails d'un job : backend-test avec logs
-- [ ] Détails d'un job : build-push montrant Docker push
-- [ ] Détails d'un job : deploy avec kubectl commands
-- [ ] Erreur exemple : backend test fail
-- [ ] Timeline du workflow (durations de chaque job)
-- [ ] Notifications d'erreur
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
+![alt text](image-4.png)
+![alt text](image-5.png)
+![alt text](image-6.png)
+![alt text](image-7.png)
 
 ---
 
@@ -528,10 +512,6 @@ docker push acrvote2earn.azurecr.io/backend:latest
 ./scripts/update.sh
 ```
 
-**SCREENSHOTS À INSÉRER ICI :**
-- [ ] Contenu de `scripts/deploy.sh` exécution
-- [ ] Output du script complet (étapes validées)
-
 ---
 
 ### 6. Monitoring & Observabilité
@@ -561,11 +541,8 @@ kubectl port-forward svc/grafana 3000:3000
 # http://localhost:3000 (admin/admin)
 ```
 
-**SCREENSHOTS À INSÉRER ICI :**
-- [ ] Prometheus metrics explorer (http://localhost:9090)
-- [ ] Grafana dashboard (CPU, Memory, Requests)
-- [ ] Alertes configurées
-- [ ] Logs agrégés
+![alt text](image-73.png)
+![alt text](image-74.png)
 
 ---
 
@@ -596,14 +573,6 @@ kubectl port-forward svc/grafana 3000:3000
 **Helm Charts** (Optionnel)
 - Templating pour prod/staging
 - Versioning cohérent
-
-**SCREENSHOTS À INSÉRER ICI :**
-- [ ] Contenu du secrets.yml (masqué pour sécurité)
-- [ ] Network policies dans kubectl
-- [ ] Scan d'image Azure Container Registry
-- [ ] GitHub Secrets configuration
-
----
 
 ---
 
@@ -747,13 +716,6 @@ npm run build       # Build TypeScript
 npm start           # Production
 ```
 
-**SCREENSHOTS À INSÉRER ICI :**
-- [ ] Terminal : `npm run dev` (serveur prêt)
-- [ ] Postman/Insomnia : POST /api/auth/register
-- [ ] Postman/Insomnia : GET /api/polls (avec JWT)
-- [ ] Logs d'erreur / validation
-- [ ] Tests Jest : `npm test`
-
 ---
 
 ### 2. Frontend (React + Vite)
@@ -853,17 +815,7 @@ npm run preview     # Aperçu du build
 npm run lint        # Vérifier le code
 ```
 
-**SCREENSHOTS À INSÉRER ICI :**
-- [ ] Page d'accueil
-- [ ] Page login
-- [ ] Page register
-- [ ] Dashboard user (liste de sondages)
-- [ ] Page sondage détaillé + vote
-- [ ] Dashboard admin
-- [ ] Formulaire création sondage
-- [ ] Profil utilisateur
-- [ ] Navigation Header (authenticated/anonymous)
-- [ ] Message d'erreur de validation
+<video controls src="frontend - Google Chrome 2025-12-29 17-09-36.mp4" title="Title"></video>
 
 ---
 
@@ -904,11 +856,6 @@ npm run lint        # Vérifier le code
 5. Page se met à jour (résultats affichés)
 ```
 
-**SCREENSHOTS À INSÉRER ICI :**
-- [ ] Flux complet : login → dashboard → vote
-- [ ] Requête Postman montrant JWT header
-- [ ] Network tab (DevTools) lors d'une requête API
-
 ---
 
 ### 4. Fonctionnalités Principales
@@ -944,13 +891,6 @@ npm run lint        # Vérifier le code
 - Statistiques globales
 - Gérer utilisateurs / sondages
 
-**SCREENSHOTS À INSÉRER ICI :**
-- [ ] Création sondage (formulaire rempli)
-- [ ] Sondage créé avec options
-- [ ] Vote en action (avant/après)
-- [ ] Résultats du sondage (graphiques/pourcentages)
-- [ ] Dashboard admin (statistiques)
-
 ---
 
 ### 5. Tests
@@ -970,10 +910,6 @@ npm test        # Lance Jest
 cd frontend
 npm test        # En cours de setup
 ```
-
-**SCREENSHOTS À INSÉRER ICI :**
-- [ ] Output `npm test` (tests passés)
-- [ ] Couverture de code (coverage report)
 
 ---
 
@@ -1021,74 +957,30 @@ npm test        # En cours de setup
 ### 2. Résultats Observables
 
 #### En Local
-**À Documenter :**
-- [ ] Docker containers running (docker ps)
-- [ ] Frontend accessible sur http://localhost:8080
-- [ ] Backend API répondant sur :3000
-- [ ] Database connectée
+- [X] Docker containers running (docker ps)
+- [X] Frontend accessible sur http://localhost:8080
+- [X] Backend API répondant sur :3000
+- [X] Database connectée
 
 #### Sur Minikube
-**À Documenter :**
-- [ ] Minikube cluster running
-- [ ] Pods en état Running
-- [ ] Services exposés (minikube service frontend)
-- [ ] Logs de chaque service
-- [ ] Performance metrics (CPU/Memory)
+- [X] Minikube cluster running
+- [X] Pods en état Running
+- [X] Services exposés (minikube service frontend)
+- [X] Logs de chaque service
+- [X] Performance metrics (CPU/Memory)
 
 #### Sur Azure AKS
-**À Documenter :**
-- [ ] Ressources Azure créées (Portal)
-- [ ] Cluster AKS avec 3 nodes
-- [ ] ACR avec images pushées
-- [ ] Application live sur IP publique
-- [ ] Grafana dashboard actif
-- [ ] Logs centralisés
-- [ ] Coûts Azure estimés
+- [X] Ressources Azure créées (Portal)
+- [X] Cluster AKS avec 3 nodes
+- [X] ACR avec images pushées
+- [X] Application live sur IP publique
+- [X] Grafana dashboard actif
+- [X] Logs centralisés
+- [X] Coûts Azure estimés
 
 ---
 
-### 3. Performance & Scalabilité
-
-#### Benchmarks
-**À mesurer/documenter :**
-- [ ] Frontend build size (Vite)
-- [ ] Backend request latency (p50, p95, p99)
-- [ ] Database query time
-- [ ] Pod startup time
-- [ ] Horizontal scaling (ajouter replicas)
-
-**VIDÉOS À INCLURE :**
-- [ ] Scaling backend : kubectl scale deployment/backend --replicas=3
-- [ ] Load testing avec Apache Bench / k6
-
----
-
-### 4. Métriques & Monitoring
-
-#### Prometheus Metrics
-**À capturer :**
-- HTTP requests rate
-- Errors rate
-- Database connections
-- Container memory/CPU usage
-- Pod restart count
-
-#### Grafana Dashboards
-**À montrer :**
-- [ ] System dashboard (CPU, Memory, Disk)
-- [ ] Application dashboard (Requests, Latency, Errors)
-- [ ] Database dashboard (Connections, Queries)
-- [ ] Business metrics (Votes/min, Users created)
-
-**SCREENSHOTS À INSÉRER ICI :**
-- [ ] Prometheus targets (tous green)
-- [ ] Grafana dashboard complète
-- [ ] Métriques lors d'une charge
-- [ ] Alertes en action
-
----
-
-### 5. Points Forts de l'Architecture
+### 3. Points Forts de l'Architecture
 
 **Moderne & Scalable**
 - Kubernetes pour orchestration
@@ -1135,165 +1027,6 @@ npm test        # En cours de setup
 - [ ] WebSocket pour real-time updates
 - [ ] Unit & Integration tests plus complets
 - [ ] Code coverage tracking dans CI/CD
-
----
-
----
-
-## GUIDE DE CAPTURE MÉDIA
-
-### Screenshots Recommandés
-
-#### Catégorie : DevOps Infrastructure
-1. **Docker Compose**
-   - Terminal montrant `docker-compose up`
-   - Output : 3 services running
-   - Résolution : 1920x1080 minimum
-
-2. **Kubernetes Local**
-   - `kubectl get pods` output
-   - `kubectl get svc` avec les ports
-   - Dashboard Minikube
-   - Frontend page via minikube service
-
-3. **Terraform & Cloud**
-   - `terraform plan` output
-   - `terraform apply` success
-   - Azure Portal : ressources créées
-   - Container Registry images
-   - Pod logs depuis Kubernetes
-
-4. **GitHub Actions**
-   - Workflow réussi (tous jobs verts)
-   - Logs d'un job
-   - Timeline du workflow
-   - Erreur exemple
-
-5. **Monitoring**
-   - Prometheus interface (targets, metrics)
-   - Grafana dashboard (overview)
-   - Alert panel
-   - Logs explorer
-
-#### Catégorie : Application
-1. **Frontend Pages**
-   - Page d'accueil
-   - Login form
-   - Register form
-   - Dashboard utilisateur
-   - Liste sondages
-   - Détail sondage + vote
-   - Résultats visualisés
-   - Dashboard admin
-   - Profil utilisateur
-
-2. **Backend & API**
-   - Logs serveur au démarrage
-   - Requête API (Postman/Insomnia)
-   - Response JSON
-   - Erreur de validation
-   - Token JWT
-   - Database schema (DBeaver/pgAdmin)
-
-3. **Tests**
-   - Jest test results
-   - Coverage report
-   - Error test example
-
-### Vidéos Recommandées
-
-**Format :** MP4 ou WebM, 1080p@30fps, ~5-10 minutes chacune
-
-1. **Video 1 : Docker Compose Setup** (5 min)
-   - Cloner le projet
-   - `docker-compose up --build`
-   - Vérifier les services
-   - Accès au frontend
-   - Vérifier les logs
-
-2. **Video 2 : Minikube Deployment** (7 min)
-   - Démarrer Minikube
-   - `./scripts/deploy-local.sh`
-   - Vérifier les pods
-   - Accès via `minikube service`
-   - Afficher les logs
-
-3. **Video 3 : Azure Cloud Deployment** (10 min)
-   - Prerequisites (Azure CLI, Terraform)
-   - `terraform apply`
-   - Montrer ressources Azure Portal
-   - `kubectl apply` manifests
-   - Application live sur IP publique
-   - Montrer Grafana monitoring
-
-4. **Video 4 : GitHub Actions CI/CD** (8 min)
-   - Faire un commit & push
-   - Montrer le workflow qui se déclenche
-   - Logs de chaque job
-   - Build & Push vers ACR
-   - Déploiement automatique en AKS
-   - Application mise à jour
-
-5. **Video 5 : Application Demo** (8 min)
-   - Register nouvel utilisateur
-   - Login
-   - Voir dashboard
-   - Créer un sondage (admin)
-   - Voter sur sondage
-   - Voir résultats
-   - Accès admin dashboard
-
-6. **Video 6 : Monitoring & Logs** (6 min)
-   - Prometheus targets
-   - Requête Prometheus
-   - Grafana dashboard
-   - Logs en temps réel
-   - Scaling pods (ajout replicas)
-
-### Structurer les Assets
-
-```
-docs/
-├── screenshots/
-│   ├── docker-compose/
-│   │   ├── 01-compose-up.png
-│   │   ├── 02-frontend-page.png
-│   │   └── 03-logs.png
-│   ├── kubernetes-local/
-│   │   ├── 01-get-pods.png
-│   │   ├── 02-get-svc.png
-│   │   └── 03-minikube-dashboard.png
-│   ├── azure-cloud/
-│   │   ├── 01-terraform-plan.png
-│   │   ├── 02-portal-resources.png
-│   │   ├── 03-acr-images.png
-│   │   └── 04-public-ip.png
-│   ├── github-actions/
-│   │   ├── 01-workflow-success.png
-│   │   ├── 02-job-logs.png
-│   │   ├── 03-timeline.png
-│   │   └── 04-error-example.png
-│   ├── monitoring/
-│   │   ├── 01-prometheus.png
-│   │   ├── 02-grafana-dashboard.png
-│   │   └── 03-alerts.png
-│   └── application/
-│       ├── 01-login.png
-│       ├── 02-dashboard.png
-│       ├── 03-create-poll.png
-│       ├── 04-poll-detail.png
-│       ├── 05-results.png
-│       ├── 06-admin-panel.png
-│       └── 07-profile.png
-├── videos/
-│   ├── 01-docker-compose-setup.mp4
-│   ├── 02-minikube-deployment.mp4
-│   ├── 03-azure-cloud-deployment.mp4
-│   ├── 04-github-actions-cicd.mp4
-│   ├── 05-application-demo.mp4
-│   └── 06-monitoring-demo.mp4
-└── README-MEDIA.md
-```
 
 ---
 
