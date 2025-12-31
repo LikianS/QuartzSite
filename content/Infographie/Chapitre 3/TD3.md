@@ -1,6 +1,7 @@
 ---
 title: TD 3 – Génération procédurale de villes
 draft: false
+author: Killian Diboues
 ---
 
 ## Objectif du TD

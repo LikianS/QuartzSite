@@ -1,6 +1,7 @@
 ---
 title: TD 1 – Rendu d'une sphère avec la marche des rayons (Ray Marching)
 draft: false
+author: Killian Diboues
 ---
 
 ## Objectif du TD

@@ -1,6 +1,7 @@
 ---
 title: TD 4 – Effets de post-traitement
 draft: false
+author: Killian Diboues
 ---
 
 ## Objectif du TD

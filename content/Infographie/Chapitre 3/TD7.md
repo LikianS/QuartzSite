@@ -1,6 +1,7 @@
 ---
 title: TD 7 – Hisser le drapeau
 draft: false
+author: Killian Diboues
 ---
 
 ##  Objectif

@@ -1,6 +1,7 @@
 ---
 title: Compte Rendu d'avancement DevOps
 draft: false
+author: Killian Diboues
 ---
 
 ## Table des matières

@@ -1,6 +1,7 @@
 ---
 title: TD 6 – Nuages volumétriques
 draft: false
+author: Killian Diboues
 ---
 
 ##  Objectif

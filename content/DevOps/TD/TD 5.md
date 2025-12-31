@@ -1,6 +1,7 @@
 ---
 title: TD 5 – CI/CD avec Kubernetes
 draft: false
+author: Killian Diboues
 ---
 
 ## 1. Objectifs

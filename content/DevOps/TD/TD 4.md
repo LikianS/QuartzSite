@@ -1,6 +1,7 @@
 ---
 title: TD 4 – Versioning, Build et Tests
 draft: false
+author: Killian Diboues
 ---
 
 ## 1. Introduction

@@ -1,6 +1,7 @@
 ---
 title: TD 3 – Générateur de grottes procédural
 draft: false
+author: Killian Diboues
 ---
 
 ## 1. Objectif du TD

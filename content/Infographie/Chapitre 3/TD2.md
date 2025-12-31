@@ -1,6 +1,7 @@
 ---
 title: TD 2 – Génération procédurale d’un terrain
 draft: false
+author: Killian Diboues
 ---
 
 
@@ -66,18 +67,6 @@ Ce TD a permis de comprendre :
 - L’application du **bruit de Perlin** pour créer des terrains réalistes.  
 - La différence entre génération **aléatoire**, **sinusoïdale** et **Perlin**.
 
----
-
-### Récapitulatif des images à inclure
-
-| N° | Contenu | Où la placer |
-|----|----------|--------------|
-| 1 | Capsule et FPC dans la scène | Étape 1 |
-| 2 | Terrain avec hauteurs aléatoires | Étape 3 |
-| 3 | Terrain sinusoïdal | Étape 4 |
-| 4 | Texture du bruit de Perlin (niveaux de gris) | Étape 5 |
-| 5 | Terrain Unity avec bruit de Perlin | Étape 5 |
-| 6 | Comparaison des méthodes | Étape 6 |
 
 ---
 

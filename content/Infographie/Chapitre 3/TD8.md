@@ -1,6 +1,7 @@
 ---
 title: TD 8 – Une retraite enneigée
 draft: false
+author: Killian Diboues
 ---
 
 ## Objectif du TD

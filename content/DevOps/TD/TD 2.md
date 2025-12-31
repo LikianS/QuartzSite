@@ -1,6 +1,7 @@
 ---
 title: TD 2 – Infrastructure as Code
 draft: false
+author: Killian Diboues
 ---
 
 ## 1. Introduction

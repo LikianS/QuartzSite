@@ -1,6 +1,7 @@
 ---
 title: Notice sur l'IA
 draft: false
+author: Killian Diboues
 ---
 
 Dans le cadre de la réalisation des Travaux Dirigés (TD) Unity, j’ai fait appel à une Intelligence Artificielle comme **outil d’assistance** et de **soutien à l’apprentissage**.  

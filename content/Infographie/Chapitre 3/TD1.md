@@ -1,6 +1,7 @@
 ---
 title: TD 1 – Création d’un terrain dans Unity
 draft: false
+author: Killian Diboues
 ---
 
 ## Objectif du TD
@@ -46,7 +47,7 @@ Une fois le relief terminé, on applique des **textures sans couture** pour donn
 3. Importer une image depuis l’Asset Store ou depuis [holistic3d.com/resources](http://www.holistic3d.com/resources/).
 4. Ajuster la **taille de tuile** et l’**opacité** du pinceau.
 
-💡 La première texture ajoutée recouvre tout le terrain : il est donc conseillé de choisir une **texture dominante** (ex. herbe ou terre).
+La première texture ajoutée recouvre tout le terrain : il est donc conseillé de choisir une **texture dominante** (ex. herbe ou terre).
 
 ---
 

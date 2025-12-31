@@ -1,3 +1,9 @@
+---
+title: Projet Omega Renouveau - Compte Rendu Technique
+draft: false
+author: Killian Diboues
+---
+
 # Projet Omega Renouveau - Compte Rendu Technique
 
 ## Vue d'ensemble

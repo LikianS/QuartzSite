@@ -1,6 +1,7 @@
 ---
 title: TD 2 – Rendu de multiples formes avec la marche des rayons
 draft: false
+author: Killian Diboues
 ---
 
 -----
