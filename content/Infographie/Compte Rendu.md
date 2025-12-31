@@ -293,7 +293,7 @@ else {
 2. **Assignation de couleur** (Vertex Colors) :
 ```csharp
 Color vertexColor = biome.baseGroundColor;
-
+```
 // Zone de donjon (cercle coloré)
 
 Le monde est conçu comme une roue élémentaire avec le village au centre et 4 biomes distincts rayonnant vers l'extérieur.
