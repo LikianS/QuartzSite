@@ -19,6 +19,8 @@ Accédez à vos rendus par domaine :
 - **[[Infographie]]** - Vue d'ensemble
 - [[Infographie/Compte Rendu|Compte Rendu Technique]]
 - **Chapitre 2**
+  - [[Infographie/Chapitre 2/TD1|TD 1 – Implémentation d'un simple générateur de noms de gobelins]]
+  - [[Infographie/Chapitre 2/TD2|TD 2 – Bruit de Perlin intégré à Unity]]
   - [[Infographie/Chapitre 2/TD3|TD 3 – Générateur de grottes procédural]]
 - **Chapitre 3**
   - [[Infographie/Chapitre 3/TD1|TD 1 – Création d'un terrain dans Unity]]
@@ -40,7 +42,10 @@ Accédez à vos rendus par domaine :
 - **[[DevOps]]** - Vue d'ensemble
 - [[DevOps/TD/Compte Rendu|Compte Rendu - Vote2Earn Platform]]
 - [[DevOps/TD/Compte Rendu d'avancement|Compte Rendu d'avancement]]
+- [[DevOps/TD/TD 0|TD 0 – Configuration de l'Environnement]]
+- [[DevOps/TD/TD 1|TD 1 – Déploiement d'Applications (Local, PaaS, IaaS)]]
 - [[DevOps/TD/TD 2|TD 2 – Infrastructure as Code]]
+- [[DevOps/TD/TD 3|TD 3 – Orchestration des Applications]]
 - [[DevOps/TD/TD 4|TD 4 – Versioning, Build et Tests]]
 - [[DevOps/TD/TD 5|TD 5 – CI/CD avec Kubernetes]]
 - [[DevOps/TD/TD 6|TD 6 – Multi-Environnements et Microservices]]
