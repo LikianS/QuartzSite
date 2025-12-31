@@ -551,8 +551,6 @@ void PlaceProp(Vector3 position, BiomeProfile biome) {
 - **Twigs** : 20% (détails au sol)
 - **Rochers** : 10% (accents, obstacles)
 
-![alt text](/Infographie/image-13.png)![alt text](/Infographie/image-14.png)
-
 ### Spécificités par Biome
 
 #### Fire Biome
@@ -783,6 +781,10 @@ La minimap utilise une caméra orthographique secondaire :
 - **Arbres** 
   
 - **Buissons**
+
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
 
 #### Armes
 - **Épée** 
