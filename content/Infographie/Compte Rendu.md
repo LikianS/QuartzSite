@@ -10,7 +10,7 @@ Projet Omega Renouveau est un jeu d'aventure en monde ouvert développé sous Un
 ### Auras du Joueur
 Le joueur possède un système d'aura dynamique basé sur quatre émotions/éléments principaux :
 
-![alt text](/Infographie/image-1.png)
+<video controls src="vid 9.mp4" title="Title"></video>
 
 - **Colère (Fire)** : Particules de feu enflammées autour du joueur
 - **Tristesse (Water)** : Particules aquatiques et effet de pluie
@@ -38,7 +38,7 @@ Les ennemis réagissent à l'émotion globale du donjon via **EnemyEmotion.cs** 
 
 ## Shaders d'Émotions et Post-Processing
 
-![alt text](/Infographie/image-2.png)
+<video controls src="vid 9.mp4" title="Title"></video>
 
 ### Post-Processing Émotionnel
 Le système utilise **DungeonPostProcessing.cs** et **DungeonPostProcessingSimple.cs** pour modifier l'ambiance visuelle :
@@ -69,7 +69,7 @@ Le système intègre des animations procédurales avec `Mathf.Sin(Time.time)` po
 
 ## Shaders de Plans : Lave et Eau
 
-![alt text](/Infographie/image-3.png)
+<video controls src="vid 8.mp4" title="Title"></video>
 
 ### Shader d'Eau Toon (Eau_shader.shader)
 Shader complet avec support de transparence et profondeur :
@@ -89,7 +89,7 @@ Shader complet avec support de transparence et profondeur :
 ### Shader de Lave Toon (Lave_shader.shader)
 Shader opaque avec effets d'explosions :
 
-![alt text](/Infographie/image-4.png)
+<video controls src="vid 7.mp4" title="Title"></video>
 
 **Caractéristiques** :
 - **Système multi-couches** : Deep color (rouge), Surface (orange), Outline (blanc)
@@ -293,8 +293,9 @@ else {
 2. **Assignation de couleur** (Vertex Colors) :
 ```csharp
 Color vertexColor = biome.baseGroundColor;
-```
+
 // Zone de donjon (cercle coloré)
+```
 
 Le monde est conçu comme une roue élémentaire avec le village au centre et 4 biomes distincts rayonnant vers l'extérieur.
 
