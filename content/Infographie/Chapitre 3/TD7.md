@@ -86,8 +86,8 @@ Ce TD illustre comment utiliser le **système de Cloth Physics** d’Unity pour 
 En combinant **gravité**, **contraintes de sommets**, et **forces externes aléatoires**, il est possible de créer des effets de vent dynamiques et crédibles.  
 Ces techniques peuvent également être appliquées à d’autres objets souples : **rideaux, voiles, capes, draperies, etc.**
 
-<video controls src="Labs - chap3 - TD7 - Windows, Mac, Linux - Unity 2023.2.20f1 _DX11_ 2025-12-04 22-58-32.mp4" title="Title"></video>
-<video controls src="Labs - chap3 - TD7 - Windows, Mac, Linux - Unity 2023.2.20f1 _DX11_ 2025-12-04 22-59-04.mp4" title="Title"></video>
+<video controls src="/Infographie/Chapitre-3/Labs---chap3---TD7---Windows,-Mac,-Linux---Unity-2023.2.20f1-_DX11_-2025-12-04-22-58-32.mp4" title="Title"></video>
+<video controls src="/Infographie/Chapitre-3/Labs---chap3---TD7---Windows,-Mac,-Linux---Unity-2023.2.20f1-_DX11_-2025-12-04-22-59-04.mp4" title="Title"></video>
 
 ## Fondamentaux du Vent dans les Systèmes Physiques
 

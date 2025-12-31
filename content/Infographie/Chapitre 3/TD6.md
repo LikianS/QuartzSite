@@ -78,7 +78,7 @@ Le **CloudsToy Mngr** peut être intégré dans n’importe quel projet Unity en
 Le **CloudsToy Manager** permet de créer des **nuages volumétriques réalistes et dynamiques** en quelques étapes.  
 Grâce à ses paramètres flexibles (taille, couleur, vitesse, densité), il est possible d’obtenir des **ambiances atmosphériques variées** : du ciel orageux dramatique à une brume douce au lever du soleil.
 
-![alt text](image-7.png)
+![alt text](/Infographie/Chapitre-3/image-7.png)
 
 ## Principes de base des nuages volumétriques
 

@@ -56,7 +56,7 @@ Le bruit de Perlin permet d’obtenir des **reliefs plus naturels** par rapport 
 - **Fonction sinusoïdale** : relief lisse mais trop uniforme.  
 - **Bruit de Perlin** : relief varié et naturel, idéal pour la génération procédurale de terrains.
 
-![alt text](image.png)
+![alt text](/Infographie/Chapitre-3/image.png)
 ---
 
 ## Résumé des apprentissages

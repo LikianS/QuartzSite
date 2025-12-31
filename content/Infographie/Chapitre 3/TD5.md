@@ -32,7 +32,7 @@ Ce TD vise à intégrer un **SkyDome** dans une scène Unity pour simuler un cie
 
 - SkyDome génère son propre soleil, pas besoin de lumière directionnelle manuelle.
 
-<video controls src="Labs - chap3 - TD5 - Windows, Mac, Linux - Unity 2023.2.20f1_ _DX11_ 2025-12-04 22-55-08.mp4" title="Title"></video>
+<video controls src="/Infographie/Chapitre-3/Labs---chap3---TD5---Windows,-Mac,-Linux---Unity-2023.2.20f1_-_DX11_-2025-12-04-22-55-08.mp4" title="Title"></video>
 
 ## Skydome
 

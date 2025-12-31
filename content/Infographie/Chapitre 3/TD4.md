@@ -51,8 +51,8 @@ Ce TD a pour objectif de découvrir l’application d’**effets de post-traitem
 ## Conclusion
 L’ajout de post-traitement est une étape clé pour **améliorer l’esthétique d’un jeu**. Même des effets simples comme le brouillard, l’occlusion ambiante et la profondeur de champ peuvent considérablement rehausser la qualité d’une scène Unity.
 
-![alt text](image-6.png)
-<video controls src="Labs - chap3 - TD4 - question4 - Windows, Mac, Linux - Unity 2023.2.20f1 _DX11_ 2025-12-04 22-51-55.mp4" title="Title"></video>
+![alt text](/Infographie/Chapitre-3/image-6.png)
+<video controls src="/Infographie/Chapitre-3/Labs---chap3---TD4---question4---Windows,-Mac,-Linux---Unity-2023.2.20f1-_DX11_-2025-12-04-22-51-55.mp4" title="Title"></video>
 
 ## Compréhension des fondamentaux :
 

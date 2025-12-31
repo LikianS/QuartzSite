@@ -76,10 +76,10 @@ Ce TD illustre comment le **bruit de Perlin** peut être utilisé au-delà des t
 Cette approche offre une base solide pour créer des environnements urbains dans des jeux ou des simulations 3D.
 
 <video controls src="Labs - chap3 - TD3 - Windows, Mac, Linux - Unity 2023.2.20f1 _DX11_ 2025-12-04 23-21-03.mp4" title="Title"></video>
-![alt text](image-2.png)
-![alt text](image-3.png)
-![alt text](image-4.png)
-![alt text](image-5.png)
+![alt text](/Infographie/Chapitre-3/image-2.png)
+![alt text](/Infographie/Chapitre-3/image-3.png)
+![alt text](/Infographie/Chapitre-3/image-4.png)
+![alt text](/Infographie/Chapitre-3/image-5.png)
 
 ## Génération procédurale de villes
 
