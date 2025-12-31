@@ -85,7 +85,7 @@ docker-compose up --build
 - Database : localhost:5432
 ```
 
-<video controls src="vid 2.mp4" title="Title"></video>
+<video controls src="../vid-2.mp4" title="Title"></video>
 
 ---
 
@@ -132,8 +132,8 @@ kubectl logs -f pod/[pod-name]      # Logs en temps réel
 ```
 
 
-<video controls src="vid 3.mp4" title="Title"></video>
-<video controls src="vid 4.mp4" title="Title"></video>
+<video controls src="../vid-3.mp4" title="Title"></video>
+<video controls src="../vid-4.mp4" title="Title"></video>
 
 ---
 
@@ -212,9 +212,9 @@ terraform apply     # Créer l'infrastructure
 # Récupérer l'IP publique du frontend
 kubectl get svc frontend
 ```
-<video controls src="vid 5.mp4" title="Title"></video>
-![alt text](image.png)
-<video controls src="vid 6.mp4" title="Title"></video>
+<video controls src="../vid-5.mp4" title="Title"></video>
+![alt text](../image.png)
+<video controls src="../vid-6.mp4" title="Title"></video>
 
 ---
 
@@ -464,13 +464,13 @@ Message: "Run ./scripts/deploy.sh locally to create infrastructure first"
 [![CI Status](https://github.com/user/repo/workflows/CI/badge.svg)](https://github.com/user/repo/actions)
 ```
 
-![alt text](image-1.png)
-![alt text](image-2.png)
-![alt text](image-3.png)
-![alt text](image-4.png)
-![alt text](image-5.png)
-![alt text](image-6.png)
-![alt text](image-7.png)
+![alt text](../image-1.png)
+![alt text](../image-2.png)
+![alt text](../image-3.png)
+![alt text](../image-4.png)
+![alt text](../image-5.png)
+![alt text](../image-6.png)
+![alt text](../image-7.png)
 
 ---
 
@@ -541,8 +541,8 @@ kubectl port-forward svc/grafana 3000:3000
 # http://localhost:3000 (admin/admin)
 ```
 
-![alt text](image-73.png)
-![alt text](image-74.png)
+![alt text](../image-73.png)
+![alt text](../image-74.png)
 
 ---
 
@@ -815,7 +815,7 @@ npm run preview     # Aperçu du build
 npm run lint        # Vérifier le code
 ```
 
-<video controls src="Vid 1.mp4" title="Title"></video>
+<video controls src="../Vid-1.mp4" title="Title"></video>
 
 ---
 

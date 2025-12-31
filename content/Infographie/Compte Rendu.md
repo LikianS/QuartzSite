@@ -10,7 +10,7 @@ Projet Omega Renouveau est un jeu d'aventure en monde ouvert développé sous Un
 ### Auras du Joueur
 Le joueur possède un système d'aura dynamique basé sur quatre émotions/éléments principaux :
 
-![alt text](image-1.png)
+![alt text](../image-1.png)
 
 - **Colère (Fire)** : Particules de feu enflammées autour du joueur
 - **Tristesse (Water)** : Particules aquatiques et effet de pluie
@@ -38,7 +38,7 @@ Les ennemis réagissent à l'émotion globale du donjon via **EnemyEmotion.cs** 
 
 ## Shaders d'Émotions et Post-Processing
 
-![alt text](image-2.png)
+![alt text](../image-2.png)
 
 ### Post-Processing Émotionnel
 Le système utilise **DungeonPostProcessing.cs** et **DungeonPostProcessingSimple.cs** pour modifier l'ambiance visuelle :
@@ -69,7 +69,7 @@ Le système intègre des animations procédurales avec `Mathf.Sin(Time.time)` po
 
 ## Shaders de Plans : Lave et Eau
 
-![alt text](image-3.png)
+![alt text](../image-3.png)
 
 ### Shader d'Eau Toon (Eau_shader.shader)
 Shader complet avec support de transparence et profondeur :
@@ -89,7 +89,7 @@ Shader complet avec support de transparence et profondeur :
 ### Shader de Lave Toon (Lave_shader.shader)
 Shader opaque avec effets d'explosions :
 
-![alt text](image-4.png)
+![alt text](../image-4.png)
 
 **Caractéristiques** :
 - **Système multi-couches** : Deep color (rouge), Surface (orange), Outline (blanc)
@@ -158,17 +158,17 @@ Shader multi-éléments :
 
 Three-tone shading : Core (mid), Outer (shadow), Hot (highlight)
 
-<video controls src="vid 4.mp4" title="Title"></video>
-<video controls src="vid 6.mp4" title="Title"></video>
-<video controls src="vid 1.mp4" title="Title"></video>
-<video controls src="vid 3.mp4" title="Title"></video>
+<video controls src="../vid-4.mp4" title="Title"></video>
+<video controls src="../vid-6.mp4" title="Title"></video>
+<video controls src="../vid-1.mp4" title="Title"></video>
+<video controls src="../vid-3.mp4" title="Title"></video>
 
 
 ---
 
 ## Cycle Jour/Nuit
 
-<video controls src="vid 5.mp4" title="Title"></video>
+<video controls src="../vid-5.mp4" title="Title"></video>
 
 ### DayNightCycle.cs
 Système complet avec gradients Unity :
@@ -200,7 +200,7 @@ Système complet avec gradients Unity :
 
 La génération procédurale est le cœur technique du projet, permettant de créer un monde infini, varié et performant.
 
-![alt text](image-5.png)
+![alt text](../image-5.png)
 
 ### Deux Approches Développées
 
@@ -262,7 +262,7 @@ void UpdateChunks() {
 }
 ```
 
-<video controls src="vid 2.mp4" title="Title"></video>
+<video controls src="../vid-2.mp4" title="Title"></video>
 
 ##### Couche 2 : WorldChunk (Générateur Individuel)
 Chaque chunk est autonome et génère son propre terrain.
@@ -335,7 +335,7 @@ Chaque biome est défini par un **BiomeProfile.cs** ScriptableObject, permettant
 - `puzzles[]` : Mécaniques d'énigmes
 - `collectibles[]` : Objets à ramasser
 
-![alt text](image-6.png)![alt text](image-7.png)![alt text](image-8.png)![alt text](image-9.png)
+![alt text](../image-6.png)![alt text](../image-7.png)![alt text](../image-8.png)![alt text](../image-9.png)
 
 ### Positionnement Géométrique des Zones
 
@@ -461,7 +461,7 @@ if (distFromDungeon < dungeonRadius) {
 }
 ```
 
-![alt text](image-10.png)
+![alt text](../image-10.png)
 
 #### 5. Anneaux d'Événements (Zones de Gameplay)
 **Système concentrique** :
@@ -550,7 +550,7 @@ void PlaceProp(Vector3 position, BiomeProfile biome) {
 - **Twigs** : 20% (détails au sol)
 - **Rochers** : 10% (accents, obstacles)
 
-![alt text](image-13.png)![alt text](image-14.png)
+![alt text](../image-13.png)![alt text](../image-14.png)
 
 ### Spécificités par Biome
 
@@ -733,7 +733,7 @@ public class BiomeProfile : ScriptableObject {
 - Designer-friendly
 
 
-![alt text](image-12.png)
+![alt text](../image-12.png)
 
 ### Optimisations Avancées
 
@@ -746,7 +746,7 @@ public class BiomeProfile : ScriptableObject {
 
 ## Minimap
 
-![alt text](image-11.png)
+![alt text](../image-11.png)
 
 ### Implémentation
 La minimap utilise une caméra orthographique secondaire :
@@ -809,7 +809,7 @@ La minimap utilise une caméra orthographique secondaire :
 #### Système d'Énigmes à Miroirs
 Un puzzle de réflexion optique complet avec physique de rayon laser.
 
-![alt text](image-13.png)![alt text](image-14.png)
+![alt text](../image-13.png)![alt text](../image-14.png)
 
 **Architecture** :
 - **LaserBeam.cs** : Gère le rayon laser et ses réflexions
@@ -843,7 +843,7 @@ currentPos = hit.point;
 #### Système d'Énigmes d'Armures
 Puzzle combinatoire complexe nécessitant observation et déduction.
 
-![alt text](image-15.png)
+![alt text](../image-15.png)
 
 **Concept** :
 4 armures avec 2 éléments modifiables chacune :
