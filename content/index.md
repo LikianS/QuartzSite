@@ -13,7 +13,7 @@ Cet espace regroupe **tous les rendus de travaux dirigés**, organisés par mati
 
 Accédez à vos rendus par domaine :
 
-### 🎨 Infographie
+### Infographie
 **Équipe :** Killian Diboues, Lohan Quintard, Maxime Kitten
 
 - **[[Infographie]]** - Vue d'ensemble
@@ -34,7 +34,7 @@ Accédez à vos rendus par domaine :
   - [[Infographie/Chapitre 4/TD2|TD 2 – Rendu de multiples formes avec la marche des rayons]]
   - [[Infographie/Chapitre 4/TD3|TD 3 – Création des Nuages dans Unity]]
 
-### 🚀 DevOps
+### DevOps
 **Équipe :** Killian Diboues, Lohan Quintard, Maxime Kitten, Louidji Graveleau, Mitia, Thibault
 
 - **[[DevOps]]** - Vue d'ensemble
