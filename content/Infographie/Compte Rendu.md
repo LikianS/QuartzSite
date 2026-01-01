@@ -557,6 +557,124 @@ void PlaceProp(Vector3 position, BiomeProfile biome) {
 - **Twigs** : 20% (détails au sol)
 - **Rochers** : 10% (accents, obstacles)
 
+### Système de Spawn d'Ennemis dans la Génération Procédurale
+
+Le système de spawn d'ennemis dans le monde procédural repose sur une architecture en trois étapes coordonnées. D'abord, chaque chunk génère dynamiquement son NavMesh après la construction du terrain en utilisant `NavMeshBuilder.BuildNavMeshData`, qui collecte non seulement le mesh du chunk actuel mais aussi ceux des chunks voisins dans un rayon de 1.5× la taille du chunk, garantissant ainsi une navigation fluide entre les zones adjacentes et évitant les discontinuités de pathfinding. Ensuite, le spawn des ennemis s'effectue via la méthode `SpawnEnemies()` qui parcourt le terrain par grille de 3×3 unités, vérifiant pour chaque position si elle respecte les critères du biome (distance minimale du village, hauteur walkable, absence de lave/eau), puis valide la position via `NavMesh.SamplePosition` pour s'assurer que l'ennemi sera bien positionné sur une surface navigable du NavMesh. Enfin, chaque ennemi instancié reçoit un système de particules unique à son biome grâce à la fonction `ActivateBiomeParticles()` qui active sélectivement le ParticleSystem enfant dont le nom correspond au type de biome (Fire, Water, Earth, Air), permettant ainsi aux ennemis de feu d'afficher des flammes, ceux d'eau des bulles, etc., tout en désactivant les autres systèmes de particules non pertinents pour créer une cohérence visuelle avec leur environnement.
+
+#### 1. Génération du NavMesh Dynamique
+**Fichier** : [WorldChunk.cs] - Méthode `BakeNavMesh()`
+
+Le NavMesh est généré procéduralement pour chaque chunk afin de permettre une navigation IA dans le monde infini.
+
+**Caractéristiques** :
+- Utilise `NavMeshBuilder.BuildNavMeshData` pour créer un NavMesh par chunk
+- **Inclusion des chunks voisins** : Collecte les meshes dans un rayon de 1.5× la taille du chunk
+- Assure la continuité de navigation entre zones adjacentes
+- Évite les discontinuités de pathfinding aux bordures
+
+**Paramètres de baking** :
+```csharp
+NavMeshBuildSettings settings = NavMesh.GetSettingsByID(0);
+settings.voxelSize = 0.5f;        // Précision de voxelisation
+settings.agentRadius = 0.5f;       // Rayon de l'agent IA
+settings.agentHeight = 2.0f;       // Hauteur de l'agent
+settings.agentMaxSlope = 45.0f;    // Pente maximale navigable
+```
+
+**Optimisation** :
+- Bounds avec overlap de 5 unités pour éviter les gaps
+- Génération asynchrone possible pour ne pas bloquer le thread principal
+- Cache de NavMesh par chunk pour éviter la régénération
+
+#### 2. Positionnement Intelligent des Ennemis
+**Fichier** : [WorldChunk.cs] - Méthodes `SpawnEnemies()` et `IsWalkableForEnemy()`
+
+Le placement des ennemis utilise un algorithme multi-critères pour garantir des spawns cohérents et jouables.
+
+**Pipeline de validation** :
+```csharp
+// 1. Scan par grille optimisée (3×3 unités)
+for (int x = 0; x < chunkSize; x += 3) {
+    for (int z = 0; z < chunkSize; z += 3) {
+        Vector3 spawnPos = CalculateWorldPosition(x, z);
+        
+        // 2. Vérifications de zone
+        if (Vector3.Distance(spawnPos, villageCenter) < minDistFromVillage)
+            continue; // Trop proche du village
+        
+        // 3. Validation terrain
+        if (!IsWalkableForEnemy(spawnPos, biome))
+            continue; // Hauteur inadaptée ou zone dangereuse
+        
+        // 4. Validation NavMesh
+        NavMeshHit hit;
+        if (!NavMesh.SamplePosition(spawnPos, out hit, 2.0f, NavMesh.AllAreas))
+            continue; // Pas de surface navigable
+        
+        // 5. Distance entre spawns
+        if (IsTooCloseToOtherEnemy(spawnPos, minSpawnDistance))
+            continue;
+        
+        // 6. Spawn validé
+        SpawnEnemy(hit.position, biome);
+    }
+}
+```
+
+**Critères de validation** :
+- **Distance minimale du village** : Configurable par biome (typiquement 30-40m)
+- **Hauteur appropriée** : Vérification de la walkability du terrain
+- **Zones dangereuses** : Exclusion des lacs de lave et d'eau
+- **NavMesh valide** : `NavMesh.SamplePosition` avec rayon de 2 unités
+- **Espacement entre ennemis** : Distance minimale configurable (5-10m)
+
+**Optimisation** :
+- Scan par grille de 3×3 unités (vs 1×1) : **89% de positions testées en moins**
+- Early exit sur les critères les plus restrictifs
+- Batch spawn pour réduire les instantiations
+
+#### 3. Système de Particules par Biome
+**Fichier** : [WorldChunk.cs] - Méthode `ActivateBiomeParticles()`
+
+Chaque ennemi spawné reçoit des particules visuelles correspondant à son biome d'origine.
+
+**Activation sélective** :
+```csharp
+void ActivateBiomeParticles(GameObject enemy, BiomeType biome) {
+    // Récupération de tous les ParticleSystem enfants
+    ParticleSystem[] allParticles = enemy.GetComponentsInChildren<ParticleSystem>(true);
+    
+    foreach (ParticleSystem ps in allParticles) {
+        // Activation basée sur le nom du GameObject
+        bool shouldActivate = ps.gameObject.name.Contains(biome.ToString());
+        
+        if (shouldActivate) {
+            ps.gameObject.SetActive(true);
+            ps.Play();
+        } else {
+            ps.gameObject.SetActive(false);
+        }
+    }
+}
+```
+
+**Correspondances visuelles** :
+- **Fire** : Particules de flammes, émission de chaleur, cendres
+- **Water** : Bulles, gouttelettes, effet aquatique
+- **Earth** : Poussière, rochers flottants, racines
+- **Air** : Tourbillons, nuages, éclairs
+
+**Avantages** :
+- Un seul prefab d'ennemi avec tous les systèmes de particules
+- Activation dynamique selon le biome = réduction du nombre d'assets
+- Cohérence visuelle automatique avec l'environnement
+- Performance optimisée : seul 1 ParticleSystem actif sur 4
+
+**Intégration gameplay** :
+- Les particules servent d'indicateur visuel du type d'ennemi
+- Cohérence avec le système d'émotions/éléments du joueur
+- Possibilité d'ajouter des interactions élémentaires (feu vs eau, etc.)
+
 ### Spécificités par Biome
 
 #### Fire Biome
