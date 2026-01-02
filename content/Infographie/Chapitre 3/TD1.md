@@ -101,3 +101,6 @@ Grâce à ces outils, il est possible de **créer rapidement des environnements 
 Ce premier TD a posé les bases de la **création de mondes naturels dans Unity**.  
 En combinant sculpture, texturage et placement d’éléments naturels, on obtient un environnement immersif et réaliste.  
 Ce travail servira de fondement aux TD suivants, axés sur la **génération procédurale** et les **systèmes automatisés**.
+
+
+![alt text](image-1.png)

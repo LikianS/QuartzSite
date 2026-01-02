@@ -6,6 +6,8 @@ author: Killian Diboues
 
 # Projet Omega Renouveau - Compte Rendu Technique
 
+https://www.youtube.com/watch?v=EJyIK4c_0J4
+
 ## Vue d'ensemble
 Projet Omega Renouveau est un jeu d'aventure en monde ouvert développé sous Unity, mettant en avant un système émotionnel et élémentaire complexe qui influence visuellement l'environnement et le gameplay.
 
@@ -1020,6 +1022,99 @@ for (int i = 0; i < armorSlots.Length; i++) {
 - Puzzles nécessitant la bonne émotion pour progresser
 - Collectibles cachés dans chaque biome
 - Ennemis spécifiques par zone
+
+---
+
+## Gameplay et Objectifs
+
+### Les Quatre Biomes – Objectif de l'Aventure
+
+**Présentation** :
+
+Le monde est divisé en quatre biomes distincts entourant le village principal, chacun façonné par une énergie ancienne et instable. Ces terres sont reliées par un équilibre fragile, aujourd'hui menacé.
+
+Au cœur de chaque biome se trouve un donjon oublié, scellé par des mécanismes et des énigmes.
+
+**Objectif du jeu** :
+
+Ton objectif est de parcourir les quatre biomes et de résoudre le donjon associé à chacun.
+
+Chaque biome propose :
+- Une ambiance unique
+- Des énigmes basées sur l'observation et la logique
+
+**Déroulement** :
+1. Explore librement le biome
+2. Observe l'environnement
+3. Accède au donjon central du biome
+4. Résous les énigmes pour en déverrouiller le cœur
+
+---
+
+## Tutoriels des Énigmes
+
+### Salle des Blasons – Tutoriel
+
+**Présentation** :
+
+Dans cette salle se dressent plusieurs armures anciennes. Chacune peut porter un blason et une arme, mais un seul arrangement est correct. Les indices gravés sur les murs te guideront vers la bonne combinaison.
+
+**Comment jouer** :
+
+#### 1. Approche-toi d'une armure
+Lorsque tu es proche d'une armure, tu peux interagir avec elle.
+
+#### 2. Changer les éléments
+- **Gâchette droite (R2)** → Change l'arme de l'armure sélectionnée
+- **Gâchette gauche (L2)** → Change le blason de l'armure sélectionnée
+
+#### 3. Observer les indices
+Un tableau sur le mur présente une énigme. Elle ne donne jamais la solution directement :
+- Certaines créatures sont voisines
+- D'autres ne peuvent pas être côte à côte
+- L'ordre des armures a son importance
+
+#### 4. Raisonner et tester
+Utilise la logique pour déduire la position correcte de chaque blason et de chaque arme.
+
+#### 5. Résoudre l'énigme
+Lorsque toutes les armures sont correctement configurées :
+- Un mécanisme s'active
+- Une porte s'ouvre
+- La voie est libre pour continuer ton aventure
+
+---
+
+### Salle des Reflets – Tutoriel
+
+**Présentation** :
+
+Dans cette salle repose un ancien mécanisme de lumière. Un laser jaillit d'un émetteur et doit être guidé jusqu'à un récepteur pour activer l'ouverture des portes.
+
+Des miroirs mobiles sont dispersés dans la pièce. Bien orientés, ils permettent de dévier le faisceau lumineux et de résoudre l'énigme.
+
+**Comment jouer** :
+
+#### 1. Se déplacer et observer
+- Déplace ton personnage librement dans la salle
+- La caméra te suit à la troisième personne et s'adapte aux murs
+
+#### 2. Interagir avec les miroirs
+Approche-toi d'un miroir pour pouvoir l'interagir :
+
+- **Gâchette gauche (L2)** → Prendre un miroir / Poser le miroir
+- **Gâchette droite (R2)** → Faire pivoter le miroir (rotation par pas de 45°)
+
+#### 3. Raisonner et tester
+Utilise la logique pour déduire la position de chaque miroir.
+
+#### 4. Résoudre l'énigme
+Lorsque le récepteur reçoit le laser :
+- Un mécanisme s'active
+- Une porte s'ouvre
+- La voie est libre pour continuer ton aventure
+
+---
 
 ### Améliorations Sonores
 **AmbianceManager.cs** gère l'ambiance par scène :
