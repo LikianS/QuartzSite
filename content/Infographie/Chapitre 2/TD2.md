@@ -1,6 +1,7 @@
 ---
 title: TD 2 – Bruit de Perlin intégré à Unity
 draft: false
+author: Killian Diboues
 ---
 
 ## Objectif du TP

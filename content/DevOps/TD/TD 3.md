@@ -1,6 +1,7 @@
 ---
 title: TD 3 – Orchestration des Applications
 draft: false
+author: Killian Diboues
 ---
 
 ## 1. Objectifs

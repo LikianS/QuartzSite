@@ -1,6 +1,7 @@
 ---
 title: TD 0 – Configuration de l'Environnement
 draft: false
+author: Killian Diboues
 ---
 
 ## 1. Introduction

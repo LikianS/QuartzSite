@@ -1,6 +1,7 @@
 ---
 title: TD 1 – Déploiement d'Applications (Local, PaaS, IaaS)
 draft: false
+author: Killian Diboues
 ---
 
 ## 1. Objectifs

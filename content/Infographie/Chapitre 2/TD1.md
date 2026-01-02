@@ -1,6 +1,7 @@
 ---
 title: TD 1 – Implémentation d'un simple générateur de noms de gobelins
 draft: false
+author: Killian Diboues
 ---
 
 ## Objectif du TP
