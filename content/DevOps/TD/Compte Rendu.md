@@ -4,7 +4,6 @@ draft: false
 author: Killian Diboues
 ---
 
-# Compte Rendu - Vote2Earn Platform
 **Application de vote avec système de récompenses déployée sur Azure**
 
 ---

@@ -4,8 +4,6 @@ draft: false
 author: Killian Diboues
 ---
 
-# Projet Omega Renouveau - Compte Rendu Technique
-
 https://www.youtube.com/watch?v=EJyIK4c_0J4
 
 ## Vue d'ensemble
@@ -862,7 +860,7 @@ public class BiomeProfile : ScriptableObject {
 
 ### Optimisations Avancées
 
-#### 1. Culling Automatique
+#### Culling Automatique
 - Unity culling frustum : objets hors écran non rendus
 - Chunks entiers désactivés si éloignés
 - Occlusion culling possible (bake requis)
