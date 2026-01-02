@@ -58,6 +58,7 @@ export default {
     },
     contentMeta: {
       readingTime: ({ minutes }) => `${minutes} min de lecture`,
+      authoredBy: ({ author }) => `Par ${author}`,
     },
   },
   pages: {

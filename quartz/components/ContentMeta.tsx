@@ -29,6 +29,15 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
     if (text) {
       const segments: (string | JSX.Element)[] = []
 
+      // Display author if available
+      const author = fileData.frontmatter?.author
+      if (author) {
+        const authorText = i18n(cfg.locale).components.contentMeta.authoredBy({
+          author: author,
+        })
+        segments.push(<span>{authorText}</span>)
+      }
+
       if (fileData.dates) {
         segments.push(<Date date={getDate(cfg, fileData)!} locale={cfg.locale} />)
       }
