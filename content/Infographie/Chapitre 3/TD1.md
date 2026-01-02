@@ -103,4 +103,4 @@ En combinant sculpture, texturage et placement d’éléments naturels, on obtie
 Ce travail servira de fondement aux TD suivants, axés sur la **génération procédurale** et les **systèmes automatisés**.
 
 
-![alt text](image-1.png)
+![alt text](/Infographie/Chapitre-3/image-1.png)
